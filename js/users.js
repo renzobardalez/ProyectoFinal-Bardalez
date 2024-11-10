@@ -6,7 +6,7 @@ const closeRegister = document.getElementById('closeRegister');
 
 /* Abre modal de registro */
 openRegister.addEventListener('click',()=>{
-    registerContainer.style.display = 'none';
+    registerContainer.style.display = 'flex';
 });
 /* Cierra modal de registro */
 closeRegister.addEventListener('click',()=>{

@@ -23,6 +23,7 @@ body {
 /* Estilos de login */
 /* Estilos de registro */
 /* Estilos de contenedores exclusivo menú*/
+/* Contenedor exclusivo del bank account */
 /* Div del income-container exlcusivo para bank income y card sale*/
 /* Contenedor exclusivo de transferAction e inventoryAction */
 /* Contenedor exclusivo de Pending Payment */
@@ -181,6 +182,7 @@ header .action-header-grid .nav-bar .option-div {
 /* Estilos de login */
 /* Estilos de registro */
 /* Estilos de contenedores exclusivo menú*/
+/* Contenedor exclusivo del bank account */
 /* Div del income-container exlcusivo para bank income y card sale*/
 /* Contenedor exclusivo de transferAction e inventoryAction */
 /* Contenedor exclusivo de Pending Payment */
@@ -385,6 +387,11 @@ main .menu-grid .dashboard-container {
   margin: 5px;
   padding: 5px;
   border: solid 1px #2F4F4F;
+}
+main .bank-account-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main .action-grid {
   display: flex;
@@ -635,6 +642,7 @@ main .detailedExpense-container-grid .save-button-container {
 /* Estilos de login */
 /* Estilos de registro */
 /* Estilos de contenedores exclusivo menú*/
+/* Contenedor exclusivo del bank account */
 /* Div del income-container exlcusivo para bank income y card sale*/
 /* Contenedor exclusivo de transferAction e inventoryAction */
 /* Contenedor exclusivo de Pending Payment */

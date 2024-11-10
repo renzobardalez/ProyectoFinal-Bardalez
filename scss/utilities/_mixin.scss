@@ -322,6 +322,12 @@
     width: 150px;
     height: 100px;
 }
+/* Contenedor exclusivo del bank account */
+@mixin bank-account-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* Div del income-container exlcusivo para bank income y card sale*/
 @mixin dashboard-container{
     grid-area: dashboard;

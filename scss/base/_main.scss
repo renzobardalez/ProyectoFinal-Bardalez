@@ -68,6 +68,9 @@ main{
                 @include dashboard-container;
             }
         }
+        .bank-account-grid{
+            @include bank-account-grid;
+        }
         .action-grid{
             @include action-grid;
             .option-div{

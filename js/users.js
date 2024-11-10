@@ -25,7 +25,7 @@ document.getElementById("regButton").addEventListener("click", function (event) 
     const user = {name: name, username: username, password: password };
     /* Verificación del array */
     let users = JSON.parse(localStorage.getItem("users")) || [];
-    if (!username) { const regLogInMessage = document.getElementById("regLogInMessage"); regLogInMessage.textContent = "El nombre de usuario no puede estar vacío. <br>Por favor intente de nuevo."; 
+    if (!username) { const regLogInMessage = document.getElementById("regLogInMessage"); regLogInMessage.textContent = "El nombre de usuario no puede estar vacío. Por favor intente de nuevo."; 
     return;
     }
 
@@ -39,6 +39,10 @@ document.getElementById("regButton").addEventListener("click", function (event) 
     localStorage.setItem("users", JSON.stringify(users));
     const regLogInMessage = document.getElementById("regLogInMessage");
     regLogInMessage.textContent = "Usuario registrado con éxito";
+    
+    setTimeout(() => {
+        registerContainer.style.display = 'none';
+    },2000);
 });
 
 

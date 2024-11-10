@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CardStock - Menu </title>
+    <!-- Conexión a CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+        <section class="action-header-grid">
+            <!-- Logo -->
+            <a href="./menu.html">
+                <img class="logo" src="../img/Cardstock_logo.png" alt="">
+            </a>
+            <!-- Configuration & sign out -->
+            <div class="config">
+                <a class="config-a" href="../index.html"> 
+                    <div class="option-div"> Sign Out </div>
+                </a>  
+                <a class="config-a" href="./configuration.html"> 
+                    <div class="option-div"> Go Back </div>
+                </a>            
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="bank-account-grid">
+            <form action="">
+                <div>
+                    <label for="bankName"> Bank name: </label>
+                    <input id="bankName" type="text" required>
+                </div>
+                <div>
+                    <label for="bankCurrency"> Currency: </label>
+                    <select name="currency" id="bankCurrency" required>
+                        <option value="Soles"> Soles </option>
+                        <option value="Dólares"> Dólares </option>
+                    </select>
+                </div>
+                <div>
+                    <label for="bankDescription"> Description: </label>
+                    <input id="bankDescription" type="text">
+                </div>
+                <div>
+                    <label for="bankBalance"> Initial balance: </label>
+                    <input id="bankBalance" type="number" placeholder="Put your initial balance" required>
+                </div>
+                <button id="saveBankAccount" type=""> Save </button>
+                <p id="bankMessage"></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>Redes sociales</p>
+        </div>
+    </footer>
+    <script src="../js/banks.js"></script>
+</body>
+</html>

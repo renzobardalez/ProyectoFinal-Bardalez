@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CardStock </title>
+    <!-- Conexión a CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- Conexión a JS -->
+</head>
+<body>
+    <header>
+        <section class="header-log-in-grid">
+            <a href="index.html">
+                    <img class="logo" src="./img/Cardstock_logo.png" alt="">
+            </a>
+        </section>
+    </header>
+    <main>
+        <section class="log-in-grid">
+            <h1 class="log-in-h1"> Log In </h1>
+            <form id="logInForm" class="log-in-form" action="">
+                    <h2 class="log-in-h2"> Insert your credentials </h2>
+                    <label class="log-in-label" for="text"> Username </label>
+                    <input class="log-in-input" type="text" id="username" required>
+                    <label class="log-in-label" for="password"> Password </label>
+                    <input class="log-in-input" type="password" id="password" required>
+                <!-- <span class="log-in-span"> Forgot your password? </span> -->
+                <button class="log-in-button" type="" id="logInButton"> Log in </button>
+                <span class="log-in-span" id="openRegister"> Sign Up </span>
+            </form>
+            <p class="message" id="logInMessage"></p>
+
+            <div class="register-form-grid" id="registerContainer">
+                <div class="register-content">
+                    <span class="register-close" id="closeRegister"> Close </span>
+                    <h1 class="log-in-h1"> Register </h1>
+                    <form class="register-form" id="registerForm" action="">
+                            <h2 class="log-in-h2"> Insert your credentials </h2>
+                            <label class="log-in-label" for="text"> Name </label>
+                            <input class="log-in-input" type="text" id="regName" required>
+                            <label class="log-in-label" for="text"> Username </label>
+                            <input class="log-in-input" type="text" id="regUsername" required>
+                            <label class="log-in-label" for="password"> Password </label>
+                            <input class="log-in-input" type="password" id="regPassword" required>
+                        <button class="log-in-button" type="" id="regButton"> Register </button>
+                        <p class="message" id="regLogInMessage"></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>Redes sociales</p>
+        </div>
+    </footer>
+<script src="./js/users.js"></script>
+</body>
+</html>

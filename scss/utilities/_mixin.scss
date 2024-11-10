@@ -1,0 +1,505 @@
+// Importación de variables
+@import "../utilities/variables";
+// Importación de mapas
+@import "../utilities/maps";
+/* Mixin */
+/* ----------------------------------------------------------*/
+/* ------------------- Estilos de header ------------------- */
+/* ----------------------------------------------------------*/
+/* Estilos de grid exclusivo del header de log in*/
+@mixin header-log-in-grid{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "logo";
+    border: 1px solid $main-borders;
+    margin: 5px;
+    padding: 5px;
+    align-items: center;
+    justify-items: center;
+}
+/* Estilos de grid exclusivo del header menú */
+@mixin menu-header-grid{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "logo config"
+    "nav-bar nav-bar";
+    border: 1px solid $main-borders;
+    margin: 5px;
+    padding: 5px;
+    align-items: center;
+    justify-items: center;
+    
+    // @media screen and (min-width: medida(tablet)){
+    //     grid-template-columns: 1fr 5fr;
+    //     grid-template-rows: 1fr;
+    //     grid-template-areas: 
+    //     "logo config"
+    //     "nav-bar nav-bar";
+    //     border: 1px solid $main-borders;
+    //     margin: 5px;
+    //     padding: 5px;
+    //     align-items: center;
+    //     justify-items: center;
+    // }
+    
+    // @media screen and (min-width: medida(desktop)){
+    //     grid-template-columns: 1fr 5fr;
+    //     grid-template-rows: 1fr;
+    //     grid-template-areas: 
+    //     "logo config"
+    //     "nav-bar nav-bar";
+    //     border: 1px solid $main-borders;
+    //     margin: 5px;
+    //     padding: 5px;
+    //     align-items: center;
+    //     justify-items: center;
+    // }
+}
+@mixin action-header-grid{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "logo config";
+    border: 1px solid $main-borders;
+    margin: 5px;
+    padding: 5px;
+    align-items: center;
+    justify-items: center;
+}
+@mixin logo{
+    grid-area: logo;
+    width: 100px;
+}
+@mixin config{
+    grid-area: config;
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    padding: 5px;
+    justify-content:end;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+@mixin config-a{
+    margin: 5px;
+    padding: 5px;
+    // border: 1px solid $main-borders;
+    display: flex;
+    text-decoration: none;
+    color: $main_letter_color;
+}
+@mixin nav-bar{
+    grid-area: nav-bar;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid $main-borders;
+    display: flex;
+    align-content: space-around;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+@mixin option-div{
+    margin: 5px;
+    padding: 5px;
+    border: 2.5px solid $main-borders;
+    border-radius: 5px;
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $main_letter_color;
+}
+/* ----------------------------------------------------------*/
+/* -------------------- Estilos de main -------------------- */
+/* ----------------------------------------------------------*/
+@mixin main{
+    display: flex;
+    flex-direction:column;
+    // align-items: center;
+    // justify-items: center;
+    border: 1px solid $main-borders;
+    margin: 5px;
+    padding: 5px;
+    color: $main_letter_color;
+}
+/* Estilos de login */
+@mixin log-in-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+    "log-in-h1"
+    "log-in-form";
+    align-items: center;
+    justify-items: center;
+}
+@mixin log-in-h1{
+    grid-area: log-in-h1;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    }
+@mixin log-in-form{
+    grid-area: log-in-form;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid $main-borders;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+@mixin log-in-h2{
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+}
+@mixin log-in-label{
+    margin: 5px;
+}
+@mixin log_in_input{
+    margin: 5px;
+}
+@mixin log_in_button{
+    margin: 5px;
+    border-radius: 5px;
+    width: 70px;
+    height: 25px;
+    background-color: $main-button-color;
+    border-color: $main-button-color;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    &:hover{
+        color: $secondary_letter_color ;
+    }
+}
+@mixin log_in_span{
+    margin: 5px;
+    font-size: 10px;
+    text-decoration: underline;
+    color: $span-color;
+}
+@mixin message{
+    margin: 5px;
+    border-radius: 5px;
+}
+/* Estilos de registro */
+@mixin register-form-grid{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    border: $main-borders;
+    justify-content: center;
+    align-items: center;
+}
+@mixin register-content{
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+@mixin register-close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #333;
+}
+@mixin register-form{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid $main-borders;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    gap: 10px;
+}
+/* Estilos de contenedores exclusivo menú*/
+@mixin menu-grid{
+    width: 100%;
+    display: grid;
+    /* Mobile - Menor a 768px) */
+    @media screen and (max-width: medida(tablet)){
+    grid-template-columns: 1fr;
+    grid-template-rows:repeat(3,auto);
+    grid-template-areas: 
+    "h1"
+    "account"
+    "dashboard";
+    justify-content: left;
+}
+    /* Tablet - Entre 768px y 1024px */
+    @media screen and (min-width: medida(tablet)){
+        grid-template-columns: 1fr;
+        grid-template-rows:repeat(3,auto);
+        grid-template-areas: 
+        "h1"
+        "account"
+        "dashboard";
+        justify-content: left;
+    }
+    /* Desktop - Mayor a 1024px */
+    @media screen and (min-width: medida(desktop)){
+        grid-template-columns: 1fr;
+        grid-template-rows:repeat(3,auto);
+        grid-template-areas: 
+        "h1"
+        "account"
+        "dashboard";
+        justify-content: left;
+    }
+}
+@mixin h1-container{
+    grid-area: h1;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $main-borders;
+}
+@mixin account-container{
+    grid-area: account;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $main-borders;
+    display: flex;
+    flex-direction: column;
+    // @media screen and (min-width: medida(tablet)){
+    //     flex-wrap: wrap;
+    //     ;
+    // }
+    // /* Desktop - Mayor a 1024px */
+    // @media screen and (min-width: medida(desktop)){
+    //     flex-wrap: nowrap;
+    //     ;
+    // }
+}
+@mixin account-container-result{
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    overflow-y: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+}
+@mixin account-container-div{
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    border-radius: 5px;
+    background-color: $result-div;
+    font-size: smaller;
+    color: $secondary_letter_color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100px;
+}
+/* Div del income-container exlcusivo para bank income y card sale*/
+@mixin dashboard-container{
+    grid-area: dashboard;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $main-borders;
+
+}
+/* Contenedor exclusivo de transferAction e inventoryAction */
+@mixin action-grid{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+}
+/* Contenedor exclusivo de Pending Payment */
+@mixin pendingPayment-container-grid{
+    display: grid;
+    @media screen and (max-width: medida(tablet)){
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(7,auto);
+    grid-template-areas: 
+    "h1 h1"
+    "expense expense"
+    "income income"
+    "items addItem"
+    "added added"
+    "total total"
+    "save save"
+    ;
+    }
+}
+@mixin expense-account-container{
+    grid-area: expense;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+@mixin income-account-container{
+    grid-area: income;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+@mixin item-container{
+    grid-area: items;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+}
+@mixin filter-item{
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+}
+@mixin result-item{
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    height: 200px;
+    overflow-y: auto;
+}
+@mixin result-container-p{
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    text-align:left;
+    background-color: white;
+    font-size: smaller;
+}
+@mixin add-item-container{
+    grid-area: addItem;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+}
+@mixin added-item{
+    grid-area: added;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+@mixin total-container{
+    grid-area: total;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+@mixin save-button-container{
+    grid-area: save;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+}
+/* Contenedor exclusivo de Simple expense */
+@mixin simpleExpense-container-grid{
+    display: grid;
+    @media screen and (max-width: medida(tablet)){
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas: 
+    "h1"
+    "expense"
+    "expense-ammount"
+    "save"
+    ;
+    }
+}
+@mixin expense-ammount-container{
+    grid-area: expense-ammount;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+}
+/* Contenedr exclusivo de Detailed expense */
+@mixin detailedExpense-container-grid{
+    display: grid;
+    @media screen and (max-width: medida(tablet)){
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas: 
+    "h1 h1"
+    "expense expense"
+    "items addItem"
+    "shared shared"
+    "total total"
+    "save save"
+    ;
+    }
+}
+@mixin item-detail{
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+@mixin shared-comsumption{
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid $main-borders;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/* --------------------------------------------------------- */
+/* ------------------- Estilos de footer ------------------- */
+/* --------------------------------------------------------- */
+@mixin footer{
+    border: 1px solid $main-borders;
+    margin: 5px;
+    padding: 5px;
+}

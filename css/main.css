@@ -1,0 +1,656 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFFFFF;
+  font-family: "Roboto";
+}
+
+/* Mixin */
+/* ----------------------------------------------------------*/
+/* ------------------- Estilos de header ------------------- */
+/* ----------------------------------------------------------*/
+/* Estilos de grid exclusivo del header de log in*/
+/* Estilos de grid exclusivo del header menú */
+/* ----------------------------------------------------------*/
+/* -------------------- Estilos de main -------------------- */
+/* ----------------------------------------------------------*/
+/* Estilos de login */
+/* Estilos de registro */
+/* Estilos de contenedores exclusivo menú*/
+/* Div del income-container exlcusivo para bank income y card sale*/
+/* Contenedor exclusivo de transferAction e inventoryAction */
+/* Contenedor exclusivo de Pending Payment */
+/* Contenedor exclusivo de Simple expense */
+/* Contenedr exclusivo de Detailed expense */
+/* --------------------------------------------------------- */
+/* ------------------- Estilos de footer ------------------- */
+/* --------------------------------------------------------- */
+header .header-log-in-grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: auto;
+  grid-template-areas: "logo";
+  border: 1px solid #2F4F4F;
+  margin: 5px;
+  padding: 5px;
+  align-items: center;
+  justify-items: center;
+}
+header .header-log-in-grid .logo {
+  grid-area: logo;
+  width: 100px;
+}
+header .menu-header-grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "logo config" "nav-bar nav-bar";
+  border: 1px solid #2F4F4F;
+  margin: 5px;
+  padding: 5px;
+  align-items: center;
+  justify-items: center;
+}
+header .menu-header-grid a {
+  justify-items: center;
+}
+header .menu-header-grid a .logo {
+  grid-area: logo;
+  width: 100px;
+}
+header .menu-header-grid .config {
+  grid-area: config;
+  width: 100%;
+  height: 100%;
+  margin: 5px;
+  padding: 5px;
+  justify-content: end;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+header .menu-header-grid .config .config-a {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  text-decoration: none;
+  color: #2F4F4F;
+}
+header .menu-header-grid .nav-bar {
+  grid-area: nav-bar;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #2F4F4F;
+  display: flex;
+  align-content: space-around;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+header .menu-header-grid .nav-bar .option-div {
+  margin: 5px;
+  padding: 5px;
+  border: 2.5px solid #2F4F4F;
+  border-radius: 5px;
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #2F4F4F;
+}
+header .action-header-grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: auto;
+  grid-template-areas: "logo config";
+  border: 1px solid #2F4F4F;
+  margin: 5px;
+  padding: 5px;
+  align-items: center;
+  justify-items: center;
+}
+header .action-header-grid a {
+  justify-items: center;
+}
+header .action-header-grid a .logo {
+  grid-area: logo;
+  width: 100px;
+}
+header .action-header-grid .config {
+  grid-area: config;
+  width: 100%;
+  height: 100%;
+  margin: 5px;
+  padding: 5px;
+  justify-content: end;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+header .action-header-grid .config .config-a {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  text-decoration: none;
+  color: #2F4F4F;
+}
+header .action-header-grid .nav-bar {
+  grid-area: nav-bar;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #2F4F4F;
+  display: flex;
+  align-content: space-around;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+header .action-header-grid .nav-bar .option-div {
+  margin: 5px;
+  padding: 5px;
+  border: 2.5px solid #2F4F4F;
+  border-radius: 5px;
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #2F4F4F;
+}
+
+/* Mixin */
+/* ----------------------------------------------------------*/
+/* ------------------- Estilos de header ------------------- */
+/* ----------------------------------------------------------*/
+/* Estilos de grid exclusivo del header de log in*/
+/* Estilos de grid exclusivo del header menú */
+/* ----------------------------------------------------------*/
+/* -------------------- Estilos de main -------------------- */
+/* ----------------------------------------------------------*/
+/* Estilos de login */
+/* Estilos de registro */
+/* Estilos de contenedores exclusivo menú*/
+/* Div del income-container exlcusivo para bank income y card sale*/
+/* Contenedor exclusivo de transferAction e inventoryAction */
+/* Contenedor exclusivo de Pending Payment */
+/* Contenedor exclusivo de Simple expense */
+/* Contenedr exclusivo de Detailed expense */
+/* --------------------------------------------------------- */
+/* ------------------- Estilos de footer ------------------- */
+/* --------------------------------------------------------- */
+main {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #2F4F4F;
+  margin: 5px;
+  padding: 5px;
+  color: #2F4F4F;
+  /* Log in grid*/
+  /* Main grid */
+  /* Pending Payment grid*/
+  /* Simple Expense grid*/
+  /* Detailed Expense grid */
+}
+main .log-in-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "log-in-h1" "log-in-form";
+  align-items: center;
+  justify-items: center;
+}
+main .log-in-grid .log-in-h1 {
+  grid-area: log-in-h1;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+main .log-in-grid .log-in-form {
+  grid-area: log-in-form;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #2F4F4F;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+main .log-in-grid .log-in-form .log-in-h2 {
+  margin: 5px;
+  padding: 5px;
+  font-size: 20px;
+}
+main .log-in-grid .log-in-form .log-in-label {
+  margin: 5px;
+}
+main .log-in-grid .log-in-form .log-in-input {
+  margin: 5px;
+}
+main .log-in-grid .log-in-form .log-in-span {
+  margin: 5px;
+  font-size: 10px;
+  text-decoration: underline;
+  color: #1E90FF;
+}
+main .log-in-grid .log-in-form .log-in-button {
+  margin: 5px;
+  border-radius: 5px;
+  width: 70px;
+  height: 25px;
+  background-color: #64CCEF;
+  border-color: #64CCEF;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+main .log-in-grid .log-in-form .log-in-button:hover {
+  color: #E0E0E0;
+}
+main .log-in-grid .message {
+  margin: 5px;
+  border-radius: 5px;
+}
+main .register-form-grid {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  border: #2F4F4F;
+  justify-content: center;
+  align-items: center;
+}
+main .register-form-grid .register-content {
+  border-radius: 5px;
+  width: auto;
+  height: auto;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+main .register-form-grid .register-content .register-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #333;
+}
+main .register-form-grid .register-content .register-form {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #2F4F4F;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  gap: 10px;
+}
+main .register-form-grid .register-content .register-form .log-in-h2 {
+  margin: 5px;
+  padding: 5px;
+  font-size: 20px;
+}
+main .menu-grid {
+  width: 100%;
+  display: grid;
+  /* Mobile - Menor a 768px) */
+  /* Tablet - Entre 768px y 1024px */
+  /* Desktop - Mayor a 1024px */
+}
+@media screen and (max-width: 768px) {
+  main .menu-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "h1" "account" "dashboard";
+    justify-content: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  main .menu-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "h1" "account" "dashboard";
+    justify-content: left;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .menu-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "h1" "account" "dashboard";
+    justify-content: left;
+  }
+}
+main .menu-grid .h1-container {
+  grid-area: h1;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #2F4F4F;
+}
+main .menu-grid .account-container {
+  grid-area: account;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #2F4F4F;
+  display: flex;
+  flex-direction: column;
+}
+main .menu-grid .account-container .account-container-result {
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  overflow-y: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+main .menu-grid .account-container .account-container-result .account-container-div {
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  border-radius: 5px;
+  background-color: #2F4F4F;
+  font-size: smaller;
+  color: #E0E0E0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100px;
+}
+main .menu-grid .dashboard-container {
+  grid-area: dashboard;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #2F4F4F;
+}
+main .action-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 400px;
+  align-items: center;
+}
+main .action-grid .option-div {
+  margin: 5px;
+  padding: 5px;
+  border: 2.5px solid #2F4F4F;
+  border-radius: 5px;
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #2F4F4F;
+}
+main .pendingPayment-container-grid {
+  display: grid;
+}
+@media screen and (max-width: 768px) {
+  main .pendingPayment-container-grid {
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px #5e6666;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: "h1 h1" "expense expense" "income income" "items addItem" "added added" "total total" "save save";
+  }
+}
+main .pendingPayment-container-grid .h1-container {
+  grid-area: h1;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #2F4F4F;
+}
+main .pendingPayment-container-grid .expense-account-container {
+  grid-area: expense;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main .pendingPayment-container-grid .income-account-container {
+  grid-area: income;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main .pendingPayment-container-grid .item-container {
+  grid-area: items;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+}
+main .pendingPayment-container-grid .item-container .filter-item {
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+}
+main .pendingPayment-container-grid .item-container .result-item {
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  height: 200px;
+  overflow-y: auto;
+}
+main .pendingPayment-container-grid .item-container .result-item .result-container-p {
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  text-align: left;
+  background-color: white;
+  font-size: smaller;
+}
+main .pendingPayment-container-grid .add-item-container {
+  grid-area: addItem;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+}
+main .pendingPayment-container-grid .added-item {
+  grid-area: added;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main .pendingPayment-container-grid .total-container {
+  grid-area: total;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main .pendingPayment-container-grid .save-button-container {
+  grid-area: save;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
+}
+main .simpleExpense-container-grid {
+  display: grid;
+}
+@media screen and (max-width: 768px) {
+  main .simpleExpense-container-grid {
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px #5e6666;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "h1" "expense" "expense-ammount" "save";
+  }
+}
+main .simpleExpense-container-grid .h1-container {
+  grid-area: h1;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #2F4F4F;
+}
+main .simpleExpense-container-grid .expense-account-container {
+  grid-area: expense;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main .simpleExpense-container-grid .expense-ammount-container {
+  grid-area: expense-ammount;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+}
+main .simpleExpense-container-grid .save-button-container {
+  grid-area: save;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
+}
+main .detailedExpense-container-grid {
+  display: grid;
+}
+@media screen and (max-width: 768px) {
+  main .detailedExpense-container-grid {
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px #5e6666;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "h1 h1" "expense expense" "items addItem" "shared shared" "total total" "save save";
+  }
+}
+main .detailedExpense-container-grid .h1-container {
+  grid-area: h1;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #2F4F4F;
+}
+main .detailedExpense-container-grid .expense-account-container {
+  grid-area: expense;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main .detailedExpense-container-grid .item-container {
+  grid-area: items;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+}
+main .detailedExpense-container-grid .item-container .item-detail {
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+main .detailedExpense-container-grid .item-container .shared-comsumption {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #2F4F4F;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main .detailedExpense-container-grid .add-item-container {
+  grid-area: addItem;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+}
+main .detailedExpense-container-grid .total-container {
+  grid-area: total;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main .detailedExpense-container-grid .save-button-container {
+  grid-area: save;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
+}
+
+/* Mixin */
+/* ----------------------------------------------------------*/
+/* ------------------- Estilos de header ------------------- */
+/* ----------------------------------------------------------*/
+/* Estilos de grid exclusivo del header de log in*/
+/* Estilos de grid exclusivo del header menú */
+/* ----------------------------------------------------------*/
+/* -------------------- Estilos de main -------------------- */
+/* ----------------------------------------------------------*/
+/* Estilos de login */
+/* Estilos de registro */
+/* Estilos de contenedores exclusivo menú*/
+/* Div del income-container exlcusivo para bank income y card sale*/
+/* Contenedor exclusivo de transferAction e inventoryAction */
+/* Contenedor exclusivo de Pending Payment */
+/* Contenedor exclusivo de Simple expense */
+/* Contenedr exclusivo de Detailed expense */
+/* --------------------------------------------------------- */
+/* ------------------- Estilos de footer ------------------- */
+/* --------------------------------------------------------- */
+footer {
+  border: 1px solid #2F4F4F;
+  margin: 5px;
+  padding: 5px;
+}
+
+body {
+  background-color: #F0F8FF;
+}
+
+/*# sourceMappingURL=main.css.map */

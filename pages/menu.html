@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CardStock - Menu </title>
+    <!-- Conexión a CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+        <section class="menu-header-grid">
+            <!-- Logo -->
+            <a href="./menu.html">
+                <img class="logo" src="../img/Cardstock_logo.png" alt="">
+            </a>
+            <!-- Configuration & sign out -->
+            <div class="config">
+                <a class="config-a" href="../index.html"> 
+                    <div class="option-div"> Configuration </div>
+                </a>
+                <a class="config-a" href="../index.html"> 
+                    <div class="option-div"> Sign Out </div>
+                </a>            
+            </div>
+            <!-- Nav-bar -->            
+            <nav class="nav-bar">
+                <a class="option-div" href="./transferAction.html"> Transfer </a>
+                <a class="option-div" href="./inventoryAction.html"> Inventory </a>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <section class="menu-grid">
+            <h1 class="h1-container"> Account summary </h1>
+            <div class="account-container"> 
+                <h2> Accounts</h2> 
+                <div class="account-container-result" id="account-container-result">
+                    
+                </div>
+            </div>
+            <div class="dashboard-container">
+                <h2> Dashboard </h2>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>Redes sociales</p>
+        </div>
+    </footer>
+    <script src="../js/banks.js"></script>
+    <script src="../js/inventory.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

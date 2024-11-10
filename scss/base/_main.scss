@@ -1,0 +1,158 @@
+// Importacion de estilos utilities
+@import "../utilities/maps";
+@import "../utilities/mixin";
+@import "../utilities/variables";
+// Estilos del main
+main{
+    @include main;
+        /* Log in grid*/
+        .log-in-grid{
+            @include log-in-grid;
+            .log-in-h1{
+                @include log-in-h1;
+            }
+            .log-in-form{
+                @include log-in-form;
+                    .log-in-h2{
+                        @include log-in-h2;
+                    }
+                    .log-in-label{
+                        @include log-in-label;
+                    }
+                    .log-in-input {
+                        @include log-in-input
+                    }
+                    .log-in-span {
+                        @include log-in-span;
+                    }
+                    .log-in-button {
+                        @include log-in-button;
+                    }
+            }
+            .message{
+                @include message;
+            }
+        }
+        .register-form-grid{
+            @include register-form-grid;
+            .register-content{
+                @include register-content;
+                .register-close{
+                    @include register-close;
+                }            
+                .register-form{
+                    @include register-form;
+                    .log-in-h2{
+                        @include log-in-h2;
+                    }
+                }    
+            }
+
+        }
+        /* Main grid */
+        .menu-grid{
+            @include menu-grid;
+            .h1-container{
+                @include h1-container;
+            }
+            .account-container{
+                @include account-container;
+                    .account-container-result{
+                        @include account-container-result;
+                        .account-container-div{
+                            @include account-container-div;
+                        }
+                    }
+            }
+            .dashboard-container{
+                @include dashboard-container;
+            }
+        }
+        .action-grid{
+            @include action-grid;
+            .option-div{
+                @include option-div;
+            }
+        }
+        /* Pending Payment grid*/
+        .pendingPayment-container-grid{
+            @include pendingPayment-container-grid;
+            .h1-container{
+                @include h1-container;
+            }
+            .expense-account-container{
+                @include expense-account-container;
+            }
+            .income-account-container{
+                @include income-account-container;
+            }
+            .item-container{
+                @include item-container;
+                .filter-item{
+                    @include filter-item;
+                }
+                .result-item{
+                    @include result-item;
+                    .result-container-p{
+                        @include result-container-p;
+                    }
+                }
+            }
+            .add-item-container{
+                @include add-item-container
+            }
+            .added-item{
+                @include added-item;
+            }
+            .total-container{
+                @include total-container;
+            }
+            .save-button-container{
+                @include save-button-container;
+            }
+        }
+        /* Simple Expense grid*/
+        .simpleExpense-container-grid{
+            @include simpleExpense-container-grid;
+            .h1-container{
+                @include h1-container;
+            }
+            .expense-account-container{
+                @include expense-account-container;
+            }
+            .expense-ammount-container{
+                @include expense-ammount-container;
+            }
+            .save-button-container{
+                @include save-button-container;
+            }
+        }
+        /* Detailed Expense grid */
+        .detailedExpense-container-grid{
+            @include detailedExpense-container-grid;
+            .h1-container{
+                @include h1-container;
+            }
+            .expense-account-container{
+                @include expense-account-container;
+            }
+            .item-container{
+                @include item-container;
+                .item-detail{
+                    @include item-detail;
+                }
+                .shared-comsumption{
+                    @include shared-comsumption;
+                }
+            }
+                .add-item-container{
+                @include add-item-container;
+            }
+            .total-container{
+                @include total-container;
+            }
+            .save-button-container{
+                @include save-button-container;
+            }
+        }
+}

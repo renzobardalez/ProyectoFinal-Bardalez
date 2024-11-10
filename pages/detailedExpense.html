@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CardStock - Expense </title>
+    <!-- Conexión a CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+        <section class="action-header-grid">
+            <!-- Logo -->
+            <a href="./menu.html">
+                <img class="logo" src="../img/Cardstock_logo.png" alt="">
+            </a>
+            <!-- Configuration & sign out -->
+            <div class="config">
+                <a class="config-a" href="./configuration.html"> 
+                    <div class="option-div"> Configuration </div>
+                </a>
+                <a class="config-a" href="../index.html"> 
+                    <div class="option-div"> Sign Out </div>
+                </a>  
+                <a class="config-a" href="./noPendingPayment.html"> 
+                    <div class="option-div"> Go Back </div>
+                </a>            
+            </div>
+        </section>
+    </header>
+    
+    <main>
+        <section class="detailedExpense-container-grid">
+            <h1 class="h1-container"> Detailed expense </h1>
+            <div class="expense-account-container"> 
+                <label for="id_bank">Select your expense bank account: </label>
+                <select name="" id="">
+                    <option value="1">Interbank Millonaria</option>
+                    <option value="2">Interbank Dólares</option>
+                    <option value="3">Interbank Simple</option>
+                    <option value="4">Crédito Interbank Soles</option>
+                    <option value="5">Crédito Interbank Dólares</option>
+                    <option value="6">Wear it</option>
+                    <option value="7">Personal</option>
+                    <option value="8">Ahorro</option>
+                    <option value="9">BCP Crédito Soles</option>
+                    <option value="10">BCP Crédito Dólares</option>
+                </select>
+            </div>
+            <div class="item-container">
+                <div class="item-detail">
+                        <label for="description"> Description: </label>
+                        <input type="text" name="description" id="description">
+                        <label for="ammount"> Ammount: </label>
+                        <input type="number" name="ammount" id="ammount">
+                        <label for="id_category"> Category: </label>
+                        <select name="id_category" id="id_category">
+                            <option value="1"> Food </option>
+                            <option value="2"> Groceries </option>
+                            <option value="3"> Enterteiment </option>
+                            <option value="4"> Yu-Gi-Oh!</option>
+                            <option value="5"> Health </option>
+                            <option value="6"> Travel </option>    
+                        </select>
+                        <label for="commnetary"> Commentary: </label>
+                        <input type="text">
+                        <div class="shared-comsumption">
+                            <label> Shared comsumption? </label>
+                            <label for="yes"> Yes </label>
+                            <input type="radio" id="yes" name="answer" value="yes">
+                            <label for="no"> No </label>
+                            <input type="radio" id="no" name="answer" value="no">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="add-item-container">
+                Add
+            </div>
+            <div class="total-container">
+                <div>
+                    <p>Total:</p>
+                </div>
+                <div>
+                    $ X.XX
+                </div>
+            </div>
+            <div class="save-button-container">
+                <button> Save </button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>Redes sociales</p>
+        </div>
+    </footer>
+    <script src="../js/banks.js"></script>
+    <script src="../js/inventory.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

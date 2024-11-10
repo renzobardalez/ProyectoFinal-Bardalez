@@ -1,0 +1,11 @@
+// Mapas
+$medidas:(
+    tablet: 768px,
+    desktop: 1024px
+);
+// Función para medidas
+@function medida($key) {
+@return map-get($medidas, $key)
+}
+
+

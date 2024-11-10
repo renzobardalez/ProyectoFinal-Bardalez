@@ -1,0 +1,8 @@
+// Importacion de estilos utilities
+@import "../utilities/maps";
+@import "../utilities/mixin";
+@import "../utilities/variables";
+// Estilos del footer
+footer{
+    @include footer;
+}

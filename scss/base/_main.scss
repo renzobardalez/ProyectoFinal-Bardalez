@@ -68,8 +68,20 @@ main{
                 @include dashboard-container;
             }
         }
-        .bank-account-grid{
-            @include bank-account-grid;
+        .configuration-grid{
+            @include configuration-grid;
+            .configuration-grid-form{
+                @include configuration-grid-form;
+                .configuration-input{
+                    @include configuration-input;
+                    .form-field{
+                        @include form-field;
+                    }
+                }
+            }
+            .config-save-btn{
+                @include config-save-btn;
+            }
         }
         .action-grid{
             @include action-grid;

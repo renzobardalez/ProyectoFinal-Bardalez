@@ -33,27 +33,16 @@
         <section class="configuration-grid">
             <form class="configuration-grid-form" action="">
                 <div class="configuration-input">
-                    <label class="form-field" for="bankName"> Bank name: </label>
-                    <input class="form-field" id="bankName" type="text" required>
+                    <label class="form-field" for="currencyName"> Currency name: </label>
+                    <input class="form-field" id="currencyName" type="text" required>
                 </div>
                 <div class="configuration-input">
-                    <label class="form-field" for="bankCurrency"> Currency: </label>
-                    <select class="form-field" name="currency" id="bankCurrency" required>
-                        <option value="Soles"> Soles </option>
-                        <option value="Dólares"> Dólares </option>
-                    </select>
-                </div>
-                <div class="configuration-input">
-                    <label class="form-field" for="bankDescription"> Description: </label>
-                    <input class="form-field" id="bankDescription" type="text">
-                </div>
-                <div class="configuration-input">
-                    <label class="form-field" for="bankBalance"> Initial balance: </label>
-                    <input class="form-field" id="bankBalance" type="number" placeholder="Put your initial balance" required>
+                    <label class="form-field" for="currencySymbol"> Currency symbol: </label>
+                    <input class="form-field" id="currencySymbol" type="text" required>
                 </div>
             </form>
-            <button class="config-save-btn" id="saveBankAccount" type=""> Save </button>
-            <p id="bankMessage"></p>
+            <button class="config-save-btn" id="saveCredentialChanges" type=""> Save </button>
+            <p id="credentialMessage"></p>
         </section>
     </main>
     <footer>

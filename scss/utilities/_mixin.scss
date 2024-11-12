@@ -323,10 +323,43 @@
     height: 100px;
 }
 /* Contenedor exclusivo del bank account */
-@mixin bank-account-grid{
-    display: flex;
+@mixin configuration-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+    "form"
+    "btn";
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+@mixin configuration-grid-form{
+    grid-area: form;
+    display: grid;
+    gap: 1rem;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    grid-template-columns: auto 1fr;
+}
+@mixin configuration-input{
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    justify-items: end;
+    align-items: baseline;
+}
+@mixin form-field{
+    width: 100%;
+}
+@mixin config-save-btn{
+    grid-area: btn;
+    width: 100%;
+    // text-align: center;
 }
 /* Div del income-container exlcusivo para bank income y card sale*/
 @mixin dashboard-container{

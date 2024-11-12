@@ -388,10 +388,40 @@ main .menu-grid .dashboard-container {
   padding: 5px;
   border: solid 1px #2F4F4F;
 }
-main .bank-account-grid {
-  display: flex;
+main .configuration-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "form" "btn";
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+main .configuration-grid .configuration-grid-form {
+  grid-area: form;
+  display: grid;
+  gap: 1rem;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  grid-template-columns: auto 1fr;
+}
+main .configuration-grid .configuration-grid-form .configuration-input {
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: subgrid;
+  justify-items: end;
+  align-items: baseline;
+}
+main .configuration-grid .configuration-grid-form .configuration-input .form-field {
+  width: 100%;
+}
+main .configuration-grid .config-save-btn {
+  grid-area: btn;
+  width: 100%;
 }
 main .action-grid {
   display: flex;

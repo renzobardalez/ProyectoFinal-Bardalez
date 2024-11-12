@@ -20,7 +20,7 @@ const currency = [
 ]
 
 /* Registro de cuenta bancaria */
-document.getElementById("saveBankAccount").addEventListener("click", function (event) {
+document.getElementById("saveBank").addEventListener("click", function (event) {
     event.preventDefault(); // Evita que la página se recargue
     /* Verificación del array */
     let bankAccount = JSON.parse(localStorage.getItem("bankAccount")) || [];
@@ -36,6 +36,9 @@ document.getElementById("saveBankAccount").addEventListener("click", function (e
     ){
         const bankMessage = document.getElementById("bankMessage");
         bankMessage.textContent = "Por favor ingrese valores válidos.";
+        setTimeout(() => {
+            window.location.reload();
+        },1500);
         return;
     }
 
@@ -56,4 +59,7 @@ document.getElementById("saveBankAccount").addEventListener("click", function (e
     /* Reseteamos los campos */
     document.getElementById("bankName").value="";
     document.getElementById("bankDescription").value="";
+    setTimeout(() => {
+        window.location.reload();
+    },1500);
 });

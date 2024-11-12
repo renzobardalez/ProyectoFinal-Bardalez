@@ -33,26 +33,35 @@
         <section class="configuration-grid">
             <form class="configuration-grid-form" action="">
                 <div class="configuration-input">
-                    <label class="form-field" for="bankName"> Bank name: </label>
-                    <input class="form-field" id="bankName" type="text" required>
-                </div>
-                <div class="configuration-input">
-                    <label class="form-field" for="bankCurrency"> Currency: </label>
-                    <select class="form-field" name="currency" id="bankCurrency" required>
-                        <option value="Soles"> Soles </option>
-                        <option value="Dólares"> Dólares </option>
+                    <label class="form-field" for="accountBank"> Bank: </label>
+                    <select class="form-field" name="bank" id="accountBank" required>
+                        <option value="">  </option>
                     </select>
                 </div>
                 <div class="configuration-input">
-                    <label class="form-field" for="bankDescription"> Description: </label>
-                    <input class="form-field" id="bankDescription" type="text">
+                    <label class="form-field" for="accountCurrency"> Currency: </label>
+                    <select class="form-field" name="currency" id="accountCurrency" required>
+                        <option value="">  </option>
+                    </select>
                 </div>
                 <div class="configuration-input">
-                    <label class="form-field" for="bankBalance"> Initial balance: </label>
-                    <input class="form-field" id="bankBalance" type="number" placeholder="Put your initial balance" required>
+                    <label class="form-field" for="accountName"> Account name: </label>
+                    <input class="form-field" id="accountName" type="text" required>
+                </div>
+                <div class="configuration-input">
+                    <label class="form-field" for="accountNumber"> Account number: </label>
+                    <input class="form-field" id="accountNumber" type="number">
+                </div>
+                <div class="configuration-input">
+                    <label class="form-field" for="accountDescription"> Description: </label>
+                    <input class="form-field" id="accountDescription" type="text">
+                </div>
+                <div class="configuration-input">
+                    <label class="form-field" for="accountBalance"> Initial balance: </label>
+                    <input class="form-field" id="accountBalance" type="number" placeholder="Put your initial balance" required>
                 </div>
             </form>
-            <button class="config-save-btn" id="saveBankAccount" type=""> Save </button>
+            <button class="config-save-btn" id="saveAccount" type=""> Save </button>
             <p id="bankMessage"></p>
         </section>
     </main>

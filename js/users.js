@@ -32,6 +32,9 @@ document.getElementById("regButton").addEventListener("click", function (event) 
     if(users.find(elm => elm.username === username) ){
         const regLogInMessage = document.getElementById("regLogInMessage");
         regLogInMessage.textContent = "El usuario ya existe, por favor intente con otro usuario.";
+        setTimeout(() => {
+            window.location.reload();
+        },1500);
         return;
     }
 
@@ -65,7 +68,9 @@ document.getElementById("logInButton").addEventListener("click", function (event
     } else {
         logInMessage.textContent = "Usuario o clave incorrectos. Intente nuevamente."
         logInMessage.style.color = 'red';
-
+        setTimeout(() => {
+            window.location.reload();
+        },1500);
     }
 
 });

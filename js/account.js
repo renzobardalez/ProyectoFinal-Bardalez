@@ -6,7 +6,7 @@ const bankAccount = JSON.parse(localStorage.getItem("bankAccount")) || [];
 // Iteramos sobre cada item
 bankAccount.forEach((elm) => {
     const option = document.createElement("option");
-    option.value = elm.bankName;
+    option.value = elm.id;
     option.textContent = elm.bankName;
     accountBank.appendChild(option);    
 });
@@ -18,7 +18,7 @@ const currency = JSON.parse(localStorage.getItem("currency")) || [];
 // Iteramos sobre cada item
 currency.forEach((elm) => {
     const option = document.createElement("option");
-    option.value = elm.currencyName;
+    option.value = elm.id;
     option.textContent = elm.currencyName;
     accountCurrency.appendChild(option);   
 });
@@ -32,13 +32,13 @@ document.getElementById("saveAccount").addEventListener("click", function (event
     /* Incrementamos el id para el siguiente uso */
     let newId = accountIdCounter;
     /* Obtenemos los valores de la página */
-    const accountBank = document.getElementById("accountBank").value;
-    const accountCurrency = document.getElementById("accountCurrency").value;
+    const accountBankId = document.getElementById("accountBank").value;
+    const accountCurrencyId = document.getElementById("accountCurrency").value;
     const accountName = document.getElementById("accountName").value;
     const accountNumber = document.getElementById("accountNumber").value;
     const accountDescription = document.getElementById("accountDescription").value;
     const accountBalance = document.getElementById("accountBalance").value;
-    if (!accountBank || !accountCurrency || !accountName || !accountNumber  ||! accountDescription || isNaN(accountBalance)
+    if (!accountBankId || !accountCurrencyId || !accountName || !accountNumber || isNaN(accountBalance)
     ){
         const accountMessage = document.getElementById("accountMessage");
         accountMessage.textContent = "Por favor ingrese valores válidos.";
@@ -50,13 +50,14 @@ document.getElementById("saveAccount").addEventListener("click", function (event
     /* Creación del array */
     let newAccount = {
         id: newId,
-        accountBank: accountBank,
-        accountCurrency: accountCurrency,
+        accountBankId: parseInt(accountBankId),
+        accountCurrencyId: parseInt(accountCurrencyId),
         accountName: accountName,
         accountNumber: accountNumber,
         accountDescription: accountDescription,
-        accountBalance: accountBalance
+        accountBalance: parseFloat(accountBalance)
     };
+    
     account.push(newAccount);
     localStorage.setItem("account", JSON.stringify(account));
     localStorage.setItem("accountIdCounter", newId +1);

@@ -32,26 +32,17 @@
         <section class="simpleExpense-container-grid">
             <h1 class="h1-container"> Simple expense </h1>
             <div class="expense-account-container"> 
-                <label for="id_bank">Select your expense bank account: </label>
-                <select name="" id="">
-                    <option value="1">Interbank Millonaria</option>
-                    <option value="2">Interbank Dólares</option>
-                    <option value="3">Interbank Simple</option>
-                    <option value="4">Crédito Interbank Soles</option>
-                    <option value="5">Crédito Interbank Dólares</option>
-                    <option value="6">Wear it</option>
-                    <option value="7">Personal</option>
-                    <option value="8">Ahorro</option>
-                    <option value="9">BCP Crédito Soles</option>
-                    <option value="10">BCP Crédito Dólares</option>
+                <label for="simpleExpenseBank">Select your expense bank account: </label>
+                <select name="bank" id="simpleExpenseBank">
                 </select>
             </div>
             <div class="expense-ammount-container">
-                <label for=""> Ammount: </label>
-                <input type="number">
+                <label for="simpleExpenseAmmount"> Ammount: </label>
+                <input id="simpleExpenseAmmount" type="number">
             </div>
             <div class="save-button-container">
-                <button> Save </button>
+                <button id="saveSimpleExpense" type=""> Save </button>
+                <p id="simpleExpenseMessage"></p>
             </div>
         </section>
     </main>
@@ -60,8 +51,6 @@
             <p>Redes sociales</p>
         </div>
     </footer>
-    <script src="../js/banks.js"></script>
-    <script src="../js/inventory.js"></script>
-    <script src="../js/script.js"></script
+    <script src="../js/simpleExpense.js"></script>
 </body>
 </html>

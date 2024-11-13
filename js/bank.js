@@ -9,9 +9,7 @@ document.getElementById("saveBank").addEventListener("click", function (event) {
     /* Obtenemos los valores de la página */
     const bankName = document.getElementById("bankName").value;
     const bankDescription = document.getElementById("bankDescription").value;
-    if (!bankName || !bankDescription 
-        // || isNaN(bankBalance) <-- USAR PARA ACCOUNT
-    ){
+    if (!bankName){
         const bankMessage = document.getElementById("bankMessage");
         bankMessage.textContent = "Por favor ingrese valores válidos.";
         setTimeout(() => {

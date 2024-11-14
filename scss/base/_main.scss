@@ -55,6 +55,9 @@ main{
             .h1-container{
                 @include h1-container;
             }
+            .transaction-container{
+                @include transaction-container;
+            }
             .account-container{
                 @include account-container;
                     .account-container-result{
@@ -168,6 +171,29 @@ main{
             }
             .save-button-container{
                 @include save-button-container;
+            }
+        }
+        /* Transactions grid */
+        .transactions-grid{
+            @include transactions-grid;
+                .h1-container{
+                @include h1-container;
+            }
+                .transactions-filter-grid-form{
+                    @include transactions-filter-grid-form;
+                    .transaction-filter-input{
+                        @include transaction-filter-input;
+                    }
+                    .transaction-filter-field{
+                        @include transaction-filter-field;
+                    }
+            }
+                .transaction-filter-btn{
+                    @include transaction-filter-btn;
+                }
+                .transactions-results-container{
+                    @include transactions-results-container;
+
             }
         }
 }

@@ -25,14 +25,17 @@
             </div>
             <!-- Nav-bar -->            
             <nav class="nav-bar">
-                <a class="option-div" href="./transferAction.html"> Transfer </a>
-                <a class="option-div" href="./inventoryAction.html"> Inventory </a>
+                <a class="option-div" href="./transferAction.html" onclick="setInventory(0)"> Transfer </a>
+                <a class="option-div" href="./inventoryAction.html" onclick="setInventory(1)"> Inventory </a>
             </nav>
         </section>
     </header>
     <main>
         <section class="menu-grid">
             <h1 class="h1-container"> Account summary </h1>
+            <div class="transaction-container"> 
+                <h2> Transactions </h2> 
+            </div>
             <div class="account-container"> 
                 <h2> Accounts</h2> 
                 <div class="account-container-result" id="account-container-result">
@@ -49,8 +52,8 @@
             <p>Redes sociales</p>
         </div>
     </footer>
-    <script src="../js/banks.js"></script>
-    <script src="../js/inventory.js"></script>
+    <script src="../js/menu.js"></script>
     <script src="../js/script.js"></script>
+    <script>resetVariables()</script>
 </body>
 </html>

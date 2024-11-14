@@ -16,12 +16,6 @@
             </a>
             <!-- Configuration & sign out -->
             <div class="config">
-                <a class="config-a" href="./configuration.html"> 
-                    <div class="option-div"> Configuration </div>
-                </a>
-                <a class="config-a" href="../index.html"> 
-                    <div class="option-div"> Sign Out </div>
-                </a>  
                 <a class="config-a" href="./menu.html"> 
                     <div class="option-div"> Go Back </div>
                 </a>            
@@ -30,9 +24,9 @@
     </header>
     <main>
         <section class="action-grid">
-            <a class="option-div" href="./sell.html"> Sell </a>
-            <a class="option-div" href="./purchase.html"> Purchase </a>
-            <a class="option-div" href="./trade.html"> Trade </a>
+            <a class="option-div" href="./sell.html" onclick="setTransactionType(0)"> Sell </a>
+            <a class="option-div" href="./purchase.html" onclick="setTransactionType(1)"> Purchase </a>
+            <a class="option-div" href="./trade.html" onclick="setTransactionType(2)"> Trade </a>
         </section>
     </main>
     <footer>
@@ -40,8 +34,6 @@
             <p>Redes sociales</p>
         </div>
     </footer>
-    <script src="../js/banks.js"></script>
-    <script src="../js/inventory.js"></script>
     <script src="../js/script.js"></script>
 </body>
 </html>

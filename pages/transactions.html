@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CardStock - Trade </title>
+    <!-- Conexión a CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+        <section class="action-header-grid">
+            <!-- Logo -->
+            <a href="./menu.html">
+                <img class="logo" src="../img/Cardstock_logo.png" alt="">
+            </a>
+            <!-- Configuration & sign out -->
+            <div class="config">
+                <a class="config-a" href="./menu.html"> 
+                    <div class="option-div"> Menu </div>
+                </a>           
+            </div>
+        </section>
+    </header>
+    
+    <main>
+        <section class="transactions-grid">
+            <h1 class="h1-container"> Transactions </h1>
+            <form class="transactions-filter-grid-form"> 
+                <div class="transaction-filter-input">
+                    <label class="transaction-filter-field" for="transactionFilter"> Select an account: </label>
+                    <select class="transaction-filter-field" name="account" id="transactionFilter">
+                    </select>
+                </div>
+                <div class="transaction-filter-input">
+                    <label class="transaction-filter-field" for=""> Type a description: </label>
+                    <input class="transaction-filter-field" type="search" placeholder="search a description">
+                </div>
+                <div class="transaction-filter-input">
+                    <label class="transaction-filter-field" for=""> From: </label>
+                    <input class="transaction-filter-field" type="date">
+                </div>
+                <div class="transaction-filter-input">
+                    <label  class="transaction-filter-field" for=""> To: </label>
+                    <input class="transaction-filter-field" type="date">
+                </div>
+            </form>
+            <div class="transaction-filter-btn">
+                <button id="transaction-filter-btn"> Filter </button>
+            </div>
+            <div class="transactions-results-container" id="transactions-results-container">
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>Redes sociales</p>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>

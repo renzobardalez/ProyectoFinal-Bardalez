@@ -168,10 +168,10 @@
 @mixin log-in-label{
     margin: 5px;
 }
-@mixin log_in_input{
+@mixin log-in-input{
     margin: 5px;
 }
-@mixin log_in_button{
+@mixin log-in-button{
     margin: 5px;
     border-radius: 5px;
     width: 70px;
@@ -186,11 +186,12 @@
         color: $secondary_letter_color ;
     }
 }
-@mixin log_in_span{
+@mixin log-in-span{
     margin: 5px;
     font-size: 10px;
     text-decoration: underline;
     color: $span-color;
+    cursor: pointer;
 }
 @mixin message{
     margin: 5px;
@@ -242,9 +243,10 @@
     /* Mobile - Menor a 768px) */
     @media screen and (max-width: medida(tablet)){
     grid-template-columns: 1fr;
-    grid-template-rows:repeat(3,auto);
+    grid-template-rows:repeat(4,auto);
     grid-template-areas: 
     "h1"
+    "transaction"
     "account"
     "dashboard";
     justify-content: left;
@@ -255,6 +257,7 @@
         grid-template-rows:repeat(3,auto);
         grid-template-areas: 
         "h1"
+        "transaction"
         "account"
         "dashboard";
         justify-content: left;
@@ -265,6 +268,7 @@
         grid-template-rows:repeat(3,auto);
         grid-template-areas: 
         "h1"
+        "transaction"
         "account"
         "dashboard";
         justify-content: left;
@@ -275,6 +279,14 @@
     margin: 5px;
     padding: 5px;
     border: solid 1px $main-borders;
+}
+@mixin transaction-container{
+    grid-area: transaction;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $main-borders;
+    display: flex;
+    flex-direction: column;
 }
 @mixin account-container{
     grid-area: account;
@@ -321,8 +333,15 @@
     align-items: center;
     width: 150px;
     height: 100px;
+    a{
+        color: $secondary_letter_color;
+        text-decoration: none;
+        &:hover{
+            color: gray;
+        }
+    }
 }
-/* Contenedor exclusivo del bank account */
+/* Contenedor exclusivo de configuration */
 @mixin configuration-grid{
     display: grid;
     grid-template-columns: 1fr;
@@ -534,6 +553,54 @@
     justify-content: space-between;
     align-items: center;
 }
+
+/* Contenedor exclusivo de Transactions*/
+@mixin transactions-grid{
+    display: grid;
+    grid-template-columns:1fr auto;
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: 
+    "h1 h1"
+    "transaction-filter transaction-filter-btn"
+    "transaction-results transaction-results";
+}
+@mixin transactions-filter-grid-form{
+    grid-area: transaction-filter;
+    display: grid;
+    gap: 1rem;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    grid-template-columns: auto 1fr;
+}
+// Hijos del form
+@mixin transaction-filter-input{
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    justify-items: end;
+    align-items: baseline;
+}
+@mixin transaction-filter-field{
+    width: 100%;
+}
+@mixin transaction-filter-btn{
+    grid-area: transaction-filter-btn;
+    display: flex;
+    margin: 5px;
+    // padding: 5px;
+    justify-content: center;
+}
+// Contenedor de los resultados
+@mixin transactions-results-container{
+    grid-area: transaction-results;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    overflow-y:scroll;
+}
+
+
 /* --------------------------------------------------------- */
 /* ------------------- Estilos de footer ------------------- */
 /* --------------------------------------------------------- */

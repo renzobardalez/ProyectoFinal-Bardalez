@@ -23,12 +23,13 @@ body {
 /* Estilos de login */
 /* Estilos de registro */
 /* Estilos de contenedores exclusivo menú*/
-/* Contenedor exclusivo del bank account */
+/* Contenedor exclusivo de configuration */
 /* Div del income-container exlcusivo para bank income y card sale*/
 /* Contenedor exclusivo de transferAction e inventoryAction */
 /* Contenedor exclusivo de Pending Payment */
 /* Contenedor exclusivo de Simple expense */
 /* Contenedr exclusivo de Detailed expense */
+/* Contenedor exclusivo de Transactions*/
 /* --------------------------------------------------------- */
 /* ------------------- Estilos de footer ------------------- */
 /* --------------------------------------------------------- */
@@ -182,12 +183,13 @@ header .action-header-grid .nav-bar .option-div {
 /* Estilos de login */
 /* Estilos de registro */
 /* Estilos de contenedores exclusivo menú*/
-/* Contenedor exclusivo del bank account */
+/* Contenedor exclusivo de configuration */
 /* Div del income-container exlcusivo para bank income y card sale*/
 /* Contenedor exclusivo de transferAction e inventoryAction */
 /* Contenedor exclusivo de Pending Payment */
 /* Contenedor exclusivo de Simple expense */
 /* Contenedr exclusivo de Detailed expense */
+/* Contenedor exclusivo de Transactions*/
 /* --------------------------------------------------------- */
 /* ------------------- Estilos de footer ------------------- */
 /* --------------------------------------------------------- */
@@ -203,6 +205,7 @@ main {
   /* Pending Payment grid*/
   /* Simple Expense grid*/
   /* Detailed Expense grid */
+  /* Transactions grid */
 }
 main .log-in-grid {
   display: grid;
@@ -245,6 +248,7 @@ main .log-in-grid .log-in-form .log-in-span {
   font-size: 10px;
   text-decoration: underline;
   color: #1E90FF;
+  cursor: pointer;
 }
 main .log-in-grid .log-in-form .log-in-button {
   margin: 5px;
@@ -318,8 +322,8 @@ main .menu-grid {
 @media screen and (max-width: 768px) {
   main .menu-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: "h1" "account" "dashboard";
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "h1" "transaction" "account" "dashboard";
     justify-content: left;
   }
 }
@@ -327,7 +331,7 @@ main .menu-grid {
   main .menu-grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
-    grid-template-areas: "h1" "account" "dashboard";
+    grid-template-areas: "h1" "transaction" "account" "dashboard";
     justify-content: left;
   }
 }
@@ -335,7 +339,7 @@ main .menu-grid {
   main .menu-grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
-    grid-template-areas: "h1" "account" "dashboard";
+    grid-template-areas: "h1" "transaction" "account" "dashboard";
     justify-content: left;
   }
 }
@@ -344,6 +348,14 @@ main .menu-grid .h1-container {
   margin: 5px;
   padding: 5px;
   border: solid 1px #2F4F4F;
+}
+main .menu-grid .transaction-container {
+  grid-area: transaction;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #2F4F4F;
+  display: flex;
+  flex-direction: column;
 }
 main .menu-grid .account-container {
   grid-area: account;
@@ -381,6 +393,13 @@ main .menu-grid .account-container .account-container-result .account-container-
   align-items: center;
   width: 150px;
   height: 100px;
+}
+main .menu-grid .account-container .account-container-result .account-container-div a {
+  color: #E0E0E0;
+  text-decoration: none;
+}
+main .menu-grid .account-container .account-container-result .account-container-div a:hover {
+  color: gray;
 }
 main .menu-grid .dashboard-container {
   grid-area: dashboard;
@@ -659,6 +678,50 @@ main .detailedExpense-container-grid .save-button-container {
   justify-content: center;
   align-content: stretch;
 }
+main .transactions-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "h1 h1" "transaction-filter transaction-filter-btn" "transaction-results transaction-results";
+}
+main .transactions-grid .h1-container {
+  grid-area: h1;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #2F4F4F;
+}
+main .transactions-grid .transactions-filter-grid-form {
+  grid-area: transaction-filter;
+  display: grid;
+  gap: 1rem;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  grid-template-columns: auto 1fr;
+}
+main .transactions-grid .transactions-filter-grid-form .transaction-filter-input {
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: subgrid;
+  justify-items: end;
+  align-items: baseline;
+}
+main .transactions-grid .transactions-filter-grid-form .transaction-filter-field {
+  width: 100%;
+}
+main .transactions-grid .transaction-filter-btn {
+  grid-area: transaction-filter-btn;
+  display: flex;
+  margin: 5px;
+  justify-content: center;
+}
+main .transactions-grid .transactions-results-container {
+  grid-area: transaction-results;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  overflow-y: scroll;
+}
 
 /* Mixin */
 /* ----------------------------------------------------------*/
@@ -672,12 +735,13 @@ main .detailedExpense-container-grid .save-button-container {
 /* Estilos de login */
 /* Estilos de registro */
 /* Estilos de contenedores exclusivo menú*/
-/* Contenedor exclusivo del bank account */
+/* Contenedor exclusivo de configuration */
 /* Div del income-container exlcusivo para bank income y card sale*/
 /* Contenedor exclusivo de transferAction e inventoryAction */
 /* Contenedor exclusivo de Pending Payment */
 /* Contenedor exclusivo de Simple expense */
 /* Contenedr exclusivo de Detailed expense */
+/* Contenedor exclusivo de Transactions*/
 /* --------------------------------------------------------- */
 /* ------------------- Estilos de footer ------------------- */
 /* --------------------------------------------------------- */

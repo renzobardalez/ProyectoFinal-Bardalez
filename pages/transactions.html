@@ -28,21 +28,21 @@
             <h1 class="h1-container"> Transactions </h1>
             <form class="transactions-filter-grid-form"> 
                 <div class="transaction-filter-input">
-                    <label class="transaction-filter-field" for="transactionFilter"> Select an account: </label>
-                    <select class="transaction-filter-field" name="account" id="transactionFilter">
+                    <label class="transaction-filter-field" for="accountFilter"> Select an account: </label>
+                    <select class="transaction-filter-field" name="account" id="accountFilter">
                     </select>
                 </div>
                 <div class="transaction-filter-input">
-                    <label class="transaction-filter-field" for=""> Type a description: </label>
-                    <input class="transaction-filter-field" type="search" placeholder="search a description">
+                    <label class="transaction-filter-field" for="descriptionFilter"> Type a description: </label>
+                    <input class="transaction-filter-field" type="search" id="descriptionFilter" placeholder="search a description">
                 </div>
                 <div class="transaction-filter-input">
-                    <label class="transaction-filter-field" for=""> From: </label>
-                    <input class="transaction-filter-field" type="date">
+                    <label class="transaction-filter-field" for="fromDateFilter"> From: </label>
+                    <input class="transaction-filter-field" id="fromDateFilter" type="date">
                 </div>
                 <div class="transaction-filter-input">
-                    <label  class="transaction-filter-field" for=""> To: </label>
-                    <input class="transaction-filter-field" type="date">
+                    <label  class="transaction-filter-field" for="toDateFilter"> To: </label>
+                    <input class="transaction-filter-field" id="toDateFilter" type="date">
                 </div>
             </form>
             <div class="transaction-filter-btn">
@@ -58,6 +58,7 @@
             <p>Redes sociales</p>
         </div>
     </footer>
+    <script scr ="../js/transactions.js"></script>
     <script src="../js/script.js"></script>
 </body>
 </html>

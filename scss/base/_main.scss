@@ -62,9 +62,6 @@ main{
                 @include account-container;
                     .account-container-result{
                         @include account-container-result;
-                        .account-container-div{
-                            @include account-container-div;
-                        }
                     }
             }
             .dashboard-container{
@@ -73,6 +70,9 @@ main{
         }
         .configuration-grid{
             @include configuration-grid;
+            .h1-container{
+                @include h1-container;
+            }
             .configuration-grid-form{
                 @include configuration-grid-form;
                 .configuration-input{

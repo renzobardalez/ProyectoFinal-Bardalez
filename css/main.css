@@ -326,6 +326,11 @@ main .menu-grid {
   /* Tablet - Entre 768px y 1024px */
   /* Desktop - Mayor a 1024px */
 }
+main .menu-grid a {
+  text-decoration: none;
+  color: #2F4F4F;
+  cursor: pointer;
+}
 @media screen and (max-width: 768px) {
   main .menu-grid {
     grid-template-columns: 1fr;
@@ -355,6 +360,7 @@ main .menu-grid .h1-container {
   margin: 5px;
   padding: 5px;
   border: solid 1px #2F4F4F;
+  text-align: left;
 }
 main .menu-grid .transaction-container {
   grid-area: transaction;
@@ -386,7 +392,7 @@ main .menu-grid .account-container .account-container-result {
   justify-content: center;
   height: 150px;
 }
-main .menu-grid .account-container .account-container-result .account-container-div {
+main .menu-grid .account-container .account-container-result div {
   margin: 5px;
   padding: 5px;
   border: solid 1px #5e6666;
@@ -401,11 +407,11 @@ main .menu-grid .account-container .account-container-result .account-container-
   width: 150px;
   height: 100px;
 }
-main .menu-grid .account-container .account-container-result .account-container-div a {
+main .menu-grid .account-container .account-container-result div a {
   color: #E0E0E0;
   text-decoration: none;
 }
-main .menu-grid .account-container .account-container-result .account-container-div a:hover {
+main .menu-grid .account-container .account-container-result div a:hover {
   color: gray;
 }
 main .menu-grid .dashboard-container {
@@ -417,14 +423,21 @@ main .menu-grid .dashboard-container {
 main .configuration-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto;
-  grid-template-areas: "form" "btn";
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "h1" "form" "btn";
   margin: 5px;
   padding: 5px;
   border: solid 1px #5e6666;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+main .configuration-grid .h1-container {
+  grid-area: h1;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #2F4F4F;
+  text-align: left;
 }
 main .configuration-grid .configuration-grid-form {
   grid-area: form;
@@ -488,6 +501,7 @@ main .pendingPayment-container-grid .h1-container {
   margin: 5px;
   padding: 5px;
   border: solid 1px #2F4F4F;
+  text-align: left;
 }
 main .pendingPayment-container-grid .expense-account-container {
   grid-area: expense;
@@ -611,6 +625,7 @@ main .simpleExpense-container-grid .h1-container {
   margin: 5px;
   padding: 5px;
   border: solid 1px #2F4F4F;
+  text-align: left;
 }
 main .simpleExpense-container-grid .expense-account-container {
   grid-area: expense;
@@ -658,6 +673,7 @@ main .detailedExpense-container-grid .h1-container {
   margin: 5px;
   padding: 5px;
   border: solid 1px #2F4F4F;
+  text-align: left;
 }
 main .detailedExpense-container-grid .expense-account-container {
   grid-area: expense;
@@ -761,6 +777,7 @@ main .income-container-grid .h1-container {
   margin: 5px;
   padding: 5px;
   border: solid 1px #2F4F4F;
+  text-align: left;
 }
 main .income-container-grid .income-account-container {
   grid-area: income;
@@ -801,6 +818,7 @@ main .transactions-grid .h1-container {
   margin: 5px;
   padding: 5px;
   border: solid 1px #2F4F4F;
+  text-align: left;
 }
 main .transactions-grid .transactions-filter-grid-form {
   grid-area: transaction-filter;

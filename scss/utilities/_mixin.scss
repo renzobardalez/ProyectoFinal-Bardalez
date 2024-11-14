@@ -240,6 +240,11 @@
 @mixin menu-grid{
     width: 100%;
     display: grid;
+    a{
+        text-decoration: none;
+        color: $main_letter_color;
+        cursor: pointer;
+    }
     /* Mobile - Menor a 768px) */
     @media screen and (max-width: medida(tablet)){
     grid-template-columns: 1fr;
@@ -279,6 +284,7 @@
     margin: 5px;
     padding: 5px;
     border: solid 1px $main-borders;
+    text-align: left;
 }
 @mixin transaction-container{
     grid-area: transaction;
@@ -318,26 +324,26 @@
     align-items: center;
     justify-content: center;
     height: 150px;
-}
-@mixin account-container-div{
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-    border-radius: 5px;
-    background-color: $result-div;
-    font-size: smaller;
-    color: $secondary_letter_color;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 100px;
-    a{
+    div{
+        margin: 5px;
+        padding: 5px;
+        border: solid 1px $secondary-borders;
+        border-radius: 5px;
+        background-color: $result-div;
+        font-size: smaller;
         color: $secondary_letter_color;
-        text-decoration: none;
-        &:hover{
-            color: gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 100px;
+        a{
+            color: $secondary_letter_color;
+            text-decoration: none;
+            &:hover{
+                color: gray;
+            }
         }
     }
 }
@@ -345,8 +351,9 @@
 @mixin configuration-grid{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
+    "h1"
     "form"
     "btn";
     margin: 5px;
@@ -378,7 +385,6 @@
 @mixin config-save-btn{
     grid-area: btn;
     width: 100%;
-    // text-align: center;
 }
 /* Div del income-container exlcusivo para bank income y card sale*/
 @mixin dashboard-container{

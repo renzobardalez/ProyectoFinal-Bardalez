@@ -7,7 +7,6 @@ const bankContainer = document.getElementById("account-container-result");
 
 account.forEach((elm) => {
     const div = document.createElement("div")
-    div.classList.add("account-container-div")
 
     const currentBank = bank.find(b => b.id === parseInt(elm.accountBankId));
     const bankName = currentBank ? currentBank.bankName : '';

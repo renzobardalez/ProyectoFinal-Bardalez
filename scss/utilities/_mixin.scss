@@ -492,6 +492,10 @@
     display: flex;
     justify-content: center;
     align-content: stretch;
+    button{
+        height: 100%;
+        width: 100%;
+    }
 }
 /* Contenedor exclusivo de Simple expense */
 @mixin simpleExpense-container-grid{
@@ -509,6 +513,35 @@
     "save"
     ;
     }
+    @media screen and (min-width: medida(tablet)){
+            margin: 5px;
+            padding: 5px;
+            border: solid 1px $secondary-borders;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4,auto);
+            grid-template-areas: 
+            "h1"
+            "expense"
+            "expense-ammount"
+            "save"
+            ;
+            }
+    @media screen and (min-width: medida(desktop)){
+        margin: 5px;
+        padding: 5px;
+        border: solid 1px $secondary-borders;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas: 
+        "h1"
+        "expense"
+        "expense-ammount"
+        "save"
+        ;
+        }
+        p{
+            text-align: center;
+        }
 }
 @mixin expense-ammount-container{
     grid-area: expense-ammount;
@@ -535,6 +568,60 @@
     ;
     }
 }
+/* Contenedor exclusivo de income*/
+/* Contenedor exclusivo de Simple expense */
+@mixin income-container-grid{
+    display: grid;
+    @media screen and (max-width: medida(tablet)){
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas: 
+    "h1"
+    "income"
+    "income-ammount"
+    "save"
+    ;
+    }
+    @media screen and (min-width: medida(tablet)){
+            margin: 5px;
+            padding: 5px;
+            border: solid 1px $secondary-borders;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4,auto);
+            grid-template-areas: 
+            "h1"
+            "income"
+            "income-ammount"
+            "save"
+            ;
+            }
+    @media screen and (min-width: medida(desktop)){
+        margin: 5px;
+        padding: 5px;
+        border: solid 1px $secondary-borders;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas: 
+        "h1"
+        "income"
+        "income-ammount"
+        "save"
+        ;
+        }
+        p{
+            text-align: center;
+        }
+}
+@mixin income-ammount-container{
+    grid-area: income-ammount;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+}
+/* Secciones de los contenedores income, simpleExpense y detailedExpense*/
 @mixin item-detail{
     margin: 5px;
     padding: 5px;
@@ -597,7 +684,23 @@
     margin: 5px;
     padding: 5px;
     border: solid 1px $secondary-borders;
-    overflow-y:scroll;
+    overflow-y:auto;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+@mixin transaction-container-div{
+    font-size: small;
+    color: $main_letter_color;
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    gap: 15px;
+
+    justify-content: space-around;
 }
 
 

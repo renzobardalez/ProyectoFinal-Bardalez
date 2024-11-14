@@ -2,7 +2,7 @@
 document.getElementById("saveBank").addEventListener("click", function (event) {
     event.preventDefault(); // Evita que la página se recargue
     /* Verificación del array */
-    let bankAccount = JSON.parse(localStorage.getItem("bankAccount")) || [];
+    let bank = JSON.parse(localStorage.getItem("bank")) || [];
     let bankIdCounter = parseInt(localStorage.getItem("bankIdCounter")) || 1;
     /* Incrementamos el id para el siguiente uso */
     let newId = bankIdCounter;
@@ -23,8 +23,8 @@ document.getElementById("saveBank").addEventListener("click", function (event) {
         bankName: bankName,
         bankDescription: bankDescription,
     };
-    bankAccount.push(newAccount);
-    localStorage.setItem("bankAccount", JSON.stringify(bankAccount));
+    bank.push(newAccount);
+    localStorage.setItem("bank", JSON.stringify(bank));
     localStorage.setItem("bankIdCounter", newId +1);
     /* Mensaje de éxito */
     const bankMessage = document.getElementById("bankMessage");

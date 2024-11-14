@@ -1,6 +1,6 @@
 /* Opción dinámica de bank */
 // Selccionamos el elemento select
-const simpleExpenseAccount = document.getElementById("simpleExpenseAccount");
+const incomeAccount = document.getElementById("incomeAccount");
 // Cargamos el array de cuentas y bancos para nombre de  la cuenta
 const account = JSON.parse(localStorage.getItem("account")) || [];
 const currency = JSON.parse(localStorage.getItem("currency")) || [];
@@ -16,38 +16,38 @@ account.forEach((elm) => {
     const currentCurrency = currency.find(b => b.id === elm.accountBankId)
     const currencySymbol = currentCurrency ? currentCurrency.currencySymbol : "Unknown bank";
     option.textContent = ` ${bankName} - ${elm.accountName} ${currencySymbol} ${elm.accountBalance}`;
-    simpleExpenseAccount.appendChild(option);    
+    incomeAccount.appendChild(option);    
 });
 /* Modificación de balance de cuenta */
-document.getElementById("saveSimpleExpense").addEventListener("click", function (event) {
+document.getElementById("saveIncome").addEventListener("click", function (event) {
     event.preventDefault();
     /* Verificación del array */
     const account = JSON.parse(localStorage.getItem("account")) || [];
     /* Obtenemos los valores de la página */
-    const simpleExpenseAccountId = parseInt(document.getElementById("simpleExpenseAccount").value);
-    const simpleExpenseAmmount = Math.abs(parseFloat(document.getElementById("simpleExpenseAmmount").value));
-    if (!simpleExpenseAccountId || isNaN(simpleExpenseAmmount)
+    const incomeAccountId = parseInt(document.getElementById("incomeAccount").value);
+    const incomeAmmount = Math.abs(parseFloat(document.getElementById("incomeAmmount").value));
+    if (!incomeAccountId || isNaN(incomeAmmount)
     ){
-        const simpleExpenseMessage = document.getElementById("simpleExpenseMessage");
-        simpleExpenseMessage.textContent = "Por favor ingrese valores válidos.";
+        const incomeMessage = document.getElementById("incomeMessage");
+        incomeMessage.textContent = "Por favor ingrese valores válidos.";
         setTimeout(() => {
             window.location.reload();
         },1500);
         return;
     }
-    const currentAccount = account.find(elm => elm.id === simpleExpenseAccountId)
+    const currentAccount = account.find(elm => elm.id === incomeAccountId)
     if(currentAccount){
-        const currentBalance = currentAccount.accountBalance - simpleExpenseAmmount;
+        const currentBalance = currentAccount.accountBalance + incomeAmmount;
         currentAccount.accountBalance = currentBalance;
         localStorage.setItem("account",JSON.stringify(account));
 
         // Creamos el objeto transaction
         const transaction = { 
             date: new Date().toISOString(), 
-            accountId: simpleExpenseAccountId, 
+            accountId: incomeAccountId, 
             bankName: bank.find(b => b.id === currentAccount.accountBankId)?.bankName || "Unknown bank", 
             accountName: currentAccount.accountName, 
-            amount: simpleExpenseAmmount, 
+            amount: incomeAmmount, 
             inventory: state.inventory, 
             transaction_type: state.transaction_type }; 
         // Cargar las transacciones históricas y agregar la nueva 
@@ -56,17 +56,17 @@ document.getElementById("saveSimpleExpense").addEventListener("click", function 
         localStorage.setItem("transactions", JSON.stringify(transactions));
 
         /* Mensaje de éxito */
-        const simpleExpenseMessage = document.getElementById("simpleExpenseMessage");
-        simpleExpenseMessage.textContent="Registro grabado con éxito.";
+        const incomeMessage = document.getElementById("incomeMessage");
+        incomeMessage.textContent="Registro grabado con éxito.";
         /* Reseteamos los campos */
-        document.getElementById("simpleExpenseAccount").value="";
-        document.getElementById("simpleExpenseAmmount").value="";
+        document.getElementById("incomeAccount").value="";
+        document.getElementById("incomeAmmount").value="";
         setTimeout(() => {
             window.location.reload();
         },1500);
     } else{
-        const simpleExpenseMessage = document.getElementById("accountMessage");
-        simpleExpenseMessage.textContent="Account not found";
+        const incomeMessage = document.getElementById("incomeMessage");
+        incomeMessage.textContent="Account not found";
     }
 
 

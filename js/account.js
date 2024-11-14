@@ -2,9 +2,9 @@
 // Selccionamos el elemento select
 const accountBank = document.getElementById("accountBank");
 // Cargamos el array
-const bankAccount = JSON.parse(localStorage.getItem("bankAccount")) || [];
+const bank = JSON.parse(localStorage.getItem("bank")) || [];
 // Iteramos sobre cada item
-bankAccount.forEach((elm) => {
+bank.forEach((elm) => {
     const option = document.createElement("option");
     option.value = elm.id;
     option.textContent = elm.bankName;

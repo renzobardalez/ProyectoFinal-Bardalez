@@ -173,6 +173,22 @@ main{
                 @include save-button-container;
             }
         }
+        /* Simple Expense grid*/
+        .income-container-grid{
+            @include income-container-grid;
+            .h1-container{
+                @include h1-container;
+            }
+            .income-account-container{
+                @include income-account-container;
+            }
+            .income-ammount-container{
+                @include income-ammount-container;
+            }
+            .save-button-container{
+                @include save-button-container;
+            }
+        }
         /* Transactions grid */
         .transactions-grid{
             @include transactions-grid;
@@ -193,6 +209,9 @@ main{
                 }
                 .transactions-results-container{
                     @include transactions-results-container;
+                    .transaction-container-div{
+                        @include transaction-container-div;
+                    }
 
             }
         }

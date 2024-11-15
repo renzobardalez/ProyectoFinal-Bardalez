@@ -92,85 +92,23 @@ main{
                 @include option-div;
             }
         }
-        /* Pending Payment grid*/
-        .pendingPayment-container-grid{
-            @include pendingPayment-container-grid;
-            .h1-container{
-                @include h1-container;
-            }
-            .expense-account-container{
-                @include expense-account-container;
-            }
-            .income-account-container{
-                @include income-account-container;
-            }
-            .item-container{
-                @include item-container;
-                .filter-item{
-                    @include filter-item;
-                }
-                .result-item{
-                    @include result-item;
-                    .result-container-p{
-                        @include result-container-p;
-                    }
-                }
-            }
-            .add-item-container{
-                @include add-item-container
-            }
-            .added-item{
-                @include added-item;
-            }
-            .total-container{
-                @include total-container;
-            }
-            .save-button-container{
-                @include save-button-container;
-            }
-        }
         /* Simple Expense grid*/
         .simpleExpense-container-grid{
             @include simpleExpense-container-grid;
             .h1-container{
                 @include h1-container;
             }
-            .expense-account-container{
-                @include expense-account-container;
-            }
-            .expense-ammount-container{
-                @include expense-ammount-container;
-            }
-            .save-button-container{
-                @include save-button-container;
-            }
-        }
-        /* Detailed Expense grid */
-        .detailedExpense-container-grid{
-            @include detailedExpense-container-grid;
-            .h1-container{
-                @include h1-container;
-            }
-            .expense-account-container{
-                @include expense-account-container;
-            }
-            .item-container{
-                @include item-container;
-                .item-detail{
-                    @include item-detail;
+            .simpleExpense-grid-form{
+                @include simpleExpense-grid-form;
+                .simpleExpense-input{
+                    @include simpleExpense-input;
                 }
-                .shared-comsumption{
-                    @include shared-comsumption;
+                .simpleExpense-form-field{
+                    @include simpleExpense-form-field;
                 }
             }
-                .add-item-container{
-                @include add-item-container;
-            }
-            .total-container{
-                @include total-container;
-            }
-            .save-button-container{
-                @include save-button-container;
+            .simpleExpense-save-btn{
+                @include simpleExpense-save-btn;
             }
         }
         /* Simple Expense grid*/
@@ -179,15 +117,7 @@ main{
             .h1-container{
                 @include h1-container;
             }
-            .income-account-container{
-                @include income-account-container;
-            }
-            .income-ammount-container{
-                @include income-ammount-container;
-            }
-            .save-button-container{
-                @include save-button-container;
-            }
+
         }
         /* Transactions grid */
         .transactions-grid{

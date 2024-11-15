@@ -197,7 +197,11 @@
     margin: 5px;
     border-radius: 5px;
 }
-/* Estilos de registro */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* ----------- Contenedor exclusivo de registro -------------*/
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
 @mixin register-form-grid{
     display: none;
     position: fixed;
@@ -236,7 +240,11 @@
     border-radius: 5px;
     gap: 10px;
 }
-/* Estilos de contenedores exclusivo menú*/
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* -------------- Contenedor exclusivo de menu --------------*/
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
 @mixin menu-grid{
     width: 100%;
     display: grid;
@@ -347,7 +355,17 @@
         }
     }
 }
-/* Contenedor exclusivo de configuration */
+@mixin dashboard-container{
+    grid-area: dashboard;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $main-borders;
+}
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* ---------- Contenedor exclusivo de Configuration ---------*/
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
 @mixin configuration-grid{
     display: grid;
     grid-template-columns: 1fr;
@@ -386,15 +404,11 @@
     grid-area: btn;
     width: 100%;
 }
-/* Div del income-container exlcusivo para bank income y card sale*/
-@mixin dashboard-container{
-    grid-area: dashboard;
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $main-borders;
-
-}
-/* Contenedor exclusivo de transferAction e inventoryAction */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/*  Contenedor exclusivo de transferAction e inventoryAction */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
 @mixin action-grid{
     display: flex;
     flex-direction: column;
@@ -402,34 +416,59 @@
     height: 400px;
     align-items: center;
 }
-/* Contenedor exclusivo de Pending Payment */
-@mixin pendingPayment-container-grid{
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* -------- Contenedor exclusivo de Simple expense --------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+@mixin simpleExpense-container-grid{
     display: grid;
-    @media screen and (max-width: medida(tablet)){
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: repeat(7,auto);
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
-    "h1 h1"
-    "expense expense"
-    "income income"
-    "items addItem"
-    "added added"
-    "total total"
-    "save save"
-    ;
-    }
-}
-@mixin expense-account-container{
-    grid-area: expense;
+    "h1"
+    "form"
+    "btn";
     margin: 5px;
     padding: 5px;
     border: solid 1px $secondary-borders;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@mixin simpleExpense-grid-form{
+    grid-area: form;
+    display: grid;
+    gap: 1rem;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    grid-template-columns: auto 1fr;
+}
+@mixin simpleExpense-input{
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    justify-items: end;
+    align-items: baseline;
+}
+@mixin simpleExpense-form-field{
+    width: 100%;
+}
+@mixin simpleExpense-save-btn{
+    grid-area: btn;
+    width: 100%;
+}
+
+
+
+
+
+@mixin expense-ammount-container{
+    grid-area: expense-ammount;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
 }
 @mixin income-account-container{
     grid-area: income;
@@ -440,142 +479,12 @@
     flex-direction: column;
     gap: 5px
 }
-@mixin item-container{
-    grid-area: items;
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-}
-@mixin filter-item{
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-}
-@mixin result-item{
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-    height: 200px;
-    overflow-y: auto;
-}
-@mixin result-container-p{
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-    text-align:left;
-    background-color: white;
-    font-size: smaller;
-}
-@mixin add-item-container{
-    grid-area: addItem;
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-}
-@mixin added-item{
-    grid-area: added;
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-@mixin total-container{
-    grid-area: total;
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-@mixin save-button-container{
-    grid-area: save;
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-    display: flex;
-    justify-content: center;
-    align-content: stretch;
-    button{
-        height: 100%;
-        width: 100%;
-    }
-}
-/* Contenedor exclusivo de Simple expense */
-@mixin simpleExpense-container-grid{
-    display: grid;
-    @media screen and (max-width: medida(tablet)){
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4,auto);
-    grid-template-areas: 
-    "h1"
-    "expense"
-    "expense-ammount"
-    "save"
-    ;
-    }
-    @media screen and (min-width: medida(tablet)){
-            margin: 5px;
-            padding: 5px;
-            border: solid 1px $secondary-borders;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(4,auto);
-            grid-template-areas: 
-            "h1"
-            "expense"
-            "expense-ammount"
-            "save"
-            ;
-            }
-    @media screen and (min-width: medida(desktop)){
-        margin: 5px;
-        padding: 5px;
-        border: solid 1px $secondary-borders;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4,auto);
-        grid-template-areas: 
-        "h1"
-        "expense"
-        "expense-ammount"
-        "save"
-        ;
-        }
-        p{
-            text-align: center;
-        }
-}
-@mixin expense-ammount-container{
-    grid-area: expense-ammount;
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-}
-/* Contenedr exclusivo de Detailed expense */
-@mixin detailedExpense-container-grid{
-    display: grid;
-    @media screen and (max-width: medida(tablet)){
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: repeat(5,auto);
-    grid-template-areas: 
-    "h1 h1"
-    "expense expense"
-    "items addItem"
-    "shared shared"
-    "total total"
-    "save save"
-    ;
-    }
-}
-/* Contenedor exclusivo de income*/
-/* Contenedor exclusivo de Simple expense */
+
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* ----------- Contenedor exclusivo de income -------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
 @mixin income-container-grid{
     display: grid;
     @media screen and (max-width: medida(tablet)){
@@ -592,18 +501,18 @@
     ;
     }
     @media screen and (min-width: medida(tablet)){
-            margin: 5px;
-            padding: 5px;
-            border: solid 1px $secondary-borders;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(4,auto);
-            grid-template-areas: 
-            "h1"
-            "income"
-            "income-ammount"
-            "save"
-            ;
-            }
+        margin: 5px;
+        padding: 5px;
+        border: solid 1px $secondary-borders;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas: 
+        "h1"
+        "income"
+        "income-ammount"
+        "save"
+        ;
+        }
     @media screen and (min-width: medida(desktop)){
         margin: 5px;
         padding: 5px;
@@ -627,27 +536,11 @@
     padding: 5px;
     border: solid 1px $secondary-borders;
 }
-/* Secciones de los contenedores income, simpleExpense y detailedExpense*/
-@mixin item-detail{
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-@mixin shared-comsumption{
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid $main-borders;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Contenedor exclusivo de Transactions*/
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* ---------- Contenedor exclusivo de Transactions ----------*/
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
 @mixin transactions-grid{
     display: grid;
     grid-template-columns:1fr auto;
@@ -709,9 +602,10 @@
     justify-content: space-around;
 }
 
-
+/* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 /* ------------------- Estilos de footer ------------------- */
+/* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 @mixin footer{
     border: 1px solid $main-borders;

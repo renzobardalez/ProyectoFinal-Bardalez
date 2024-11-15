@@ -31,19 +31,19 @@
     <main>
         <section class="simpleExpense-container-grid">
             <h1 class="h1-container"> Simple expense </h1>
-            <div class="expense-account-container"> 
-                <label for="simpleExpenseAccount">Select your expense account: </label>
-                <select name="account" id="simpleExpenseAccount">
-                    <option value=""></option>
-                </select>
-            </div>
-            <div class="expense-ammount-container">
-                <label for="simpleExpenseAmmount"> Ammount: </label>
-                <input id="simpleExpenseAmmount" type="number">
-            </div>
-            <div class="save-button-container">
-                <button id="saveSimpleExpense" type=""> Save </button>
-            </div>
+            <form class="simpleExpense-grid-form" action="">
+                <div class="simpleExpense-input"> 
+                    <label class="simpleExpense-form-field" for="simpleExpenseAccount">Select your expense account: </label>
+                    <select class="simpleExpense-form-field" name="account" id="simpleExpenseAccount">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="simpleExpense-input">
+                    <label class="simpleExpense-form-field" for="simpleExpenseAmmount"> Ammount: </label>
+                    <input class="simpleExpense-form-field" id="simpleExpenseAmmount" type="number">
+                </div>
+            </form>
+            <button class="simpleExpense-save-btn" id="saveSimpleExpense" type=""> Save </button>
             <p id="simpleExpenseMessage"></p>
         </section>
     </main>

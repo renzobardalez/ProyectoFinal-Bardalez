@@ -259,7 +259,7 @@ main {
   /* Log in grid*/
   /* Main grid */
   /* Simple Expense grid*/
-  /* Simple Expense grid*/
+  /* income grid*/
   /* Transactions grid */
 }
 main .log-in-grid {
@@ -535,7 +535,7 @@ main .simpleExpense-container-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: "h1" "form" "btn";
+  grid-template-areas: "h1" "simpleExpenseform" "simpleExpensebtn";
   margin: 5px;
   padding: 5px;
   border: solid 1px #5e6666;
@@ -551,7 +551,7 @@ main .simpleExpense-container-grid .h1-container {
   text-align: left;
 }
 main .simpleExpense-container-grid .simpleExpense-grid-form {
-  grid-area: form;
+  grid-area: simpleExpenseform;
   display: grid;
   gap: 1rem;
   margin: 5px;
@@ -570,43 +570,19 @@ main .simpleExpense-container-grid .simpleExpense-grid-form .simpleExpense-form-
   width: 100%;
 }
 main .simpleExpense-container-grid .simpleExpense-save-btn {
-  grid-area: btn;
+  grid-area: simpleExpensebtn;
   width: 100%;
 }
 main .income-container-grid {
   display: grid;
-}
-@media screen and (max-width: 768px) {
-  main .income-container-grid {
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px #5e6666;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "h1" "income" "income-ammount" "save";
-  }
-}
-@media screen and (min-width: 768px) {
-  main .income-container-grid {
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px #5e6666;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "h1" "income" "income-ammount" "save";
-  }
-}
-@media screen and (min-width: 1024px) {
-  main .income-container-grid {
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px #5e6666;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "h1" "income" "income-ammount" "save";
-  }
-}
-main .income-container-grid p {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "h1" "incomeform" "incomebtn";
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 main .income-container-grid .h1-container {
@@ -615,6 +591,29 @@ main .income-container-grid .h1-container {
   padding: 5px;
   border: solid 1px #2F4F4F;
   text-align: left;
+}
+main .income-container-grid .income-grid-form {
+  grid-area: incomeform;
+  display: grid;
+  gap: 1rem;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  grid-template-columns: auto 1fr;
+}
+main .income-container-grid .income-grid-form .income-input {
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: subgrid;
+  justify-items: end;
+  align-items: baseline;
+}
+main .income-container-grid .income-grid-form .income-form-field {
+  width: 100%;
+}
+main .income-container-grid .income-save-btn {
+  grid-area: incomebtn;
+  width: 100%;
 }
 main .transactions-grid {
   display: grid;

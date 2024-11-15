@@ -427,8 +427,8 @@
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
     "h1"
-    "form"
-    "btn";
+    "simpleExpenseform"
+    "simpleExpensebtn";
     margin: 5px;
     padding: 5px;
     border: solid 1px $secondary-borders;
@@ -437,7 +437,7 @@
     text-align: center;
 }
 @mixin simpleExpense-grid-form{
-    grid-area: form;
+    grid-area: simpleExpenseform;
     display: grid;
     gap: 1rem;
     margin: 5px;
@@ -456,30 +456,9 @@
     width: 100%;
 }
 @mixin simpleExpense-save-btn{
-    grid-area: btn;
+    grid-area: simpleExpensebtn;
     width: 100%;
 }
-
-
-
-
-
-@mixin expense-ammount-container{
-    grid-area: expense-ammount;
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-}
-@mixin income-account-container{
-    grid-area: income;
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
-    display: flex;
-    flex-direction: column;
-    gap: 5px
-}
-
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 /* ----------- Contenedor exclusivo de income -------------- */
@@ -487,54 +466,41 @@
 /* --------------------------------------------------------- */
 @mixin income-container-grid{
     display: grid;
-    @media screen and (max-width: medida(tablet)){
-    margin: 5px;
-    padding: 5px;
-    border: solid 1px $secondary-borders;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4,auto);
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
     "h1"
-    "income"
-    "income-ammount"
-    "save"
-    ;
-    }
-    @media screen and (min-width: medida(tablet)){
-        margin: 5px;
-        padding: 5px;
-        border: solid 1px $secondary-borders;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4,auto);
-        grid-template-areas: 
-        "h1"
-        "income"
-        "income-ammount"
-        "save"
-        ;
-        }
-    @media screen and (min-width: medida(desktop)){
-        margin: 5px;
-        padding: 5px;
-        border: solid 1px $secondary-borders;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4,auto);
-        grid-template-areas: 
-        "h1"
-        "income"
-        "income-ammount"
-        "save"
-        ;
-        }
-        p{
-            text-align: center;
-        }
-}
-@mixin income-ammount-container{
-    grid-area: income-ammount;
+    "incomeform"
+    "incomebtn";
     margin: 5px;
     padding: 5px;
     border: solid 1px $secondary-borders;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@mixin income-grid-form{
+    grid-area: incomeform;
+    display: grid;
+    gap: 1rem;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    grid-template-columns: auto 1fr;
+}
+@mixin income-input{
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    justify-items: end;
+    align-items: baseline;
+}
+@mixin income-form-field{
+    width: 100%;
+}
+@mixin income-save-btn{
+    grid-area: incomebtn;
+    width: 100%;
 }
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */

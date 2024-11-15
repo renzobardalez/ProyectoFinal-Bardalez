@@ -111,13 +111,24 @@ main{
                 @include simpleExpense-save-btn;
             }
         }
-        /* Simple Expense grid*/
+        /* income grid*/
         .income-container-grid{
             @include income-container-grid;
             .h1-container{
                 @include h1-container;
             }
-
+            .income-grid-form{
+                @include income-grid-form;
+                .income-input{
+                    @include income-input;
+                }
+                .income-form-field{
+                    @include income-form-field;
+                }
+            }
+            .income-save-btn{
+                @include income-save-btn;
+            }
         }
         /* Transactions grid */
         .transactions-grid{
@@ -142,7 +153,6 @@ main{
                     .transaction-container-div{
                         @include transaction-container-div;
                     }
-
             }
         }
 }

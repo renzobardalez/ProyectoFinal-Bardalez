@@ -28,21 +28,22 @@
             </div>
         </section>
     </header>
-    
     <main>
         <section class="income-container-grid">
             <h1 class="h1-container"> Income </h1>
-            <div class="income-account-container"> 
-                <label for="incomeAccount">Select your income account: </label>
-                <select name="incomeAccount" id="incomeAccount">
-                    <option value=""></option>
-                </select>
-            </div>
-            <div class="income-ammount-container">
-                <label for="incomeAmmount"> Ammount: </label>
-                <input id="incomeAmmount" type="number">
-            </div>
-            <button id="saveIncome" type=""> Save </button>
+            <form class="income-grid-form" action="">
+                <div class="income-input"> 
+                    <label class="income-form-field" for="incomeAccount">Select your income account: </label>
+                    <select class="income-form-field" name="incomeAccount" id="incomeAccount">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="income-input">
+                    <label class="income-form-field" for="incomeAmmount"> Ammount: </label>
+                    <input class="income-form-field" id="incomeAmmount" type="number">
+                </div>
+            </form>
+            <button class="income-save-btn" id="saveIncome" type=""> Save </button>
             <p id="incomeMessage"></p>
         </section>
     </main>

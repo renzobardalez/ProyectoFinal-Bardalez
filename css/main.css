@@ -472,7 +472,7 @@ main .configuration-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: "h1" "form" "btn";
+  grid-template-areas: "h1" "configform" "configbtn";
   margin: 5px;
   padding: 5px;
   border: solid 1px #5e6666;
@@ -488,7 +488,7 @@ main .configuration-grid .h1-container {
   text-align: left;
 }
 main .configuration-grid .configuration-grid-form {
-  grid-area: form;
+  grid-area: configform;
   display: grid;
   gap: 1rem;
   margin: 5px;
@@ -503,11 +503,11 @@ main .configuration-grid .configuration-grid-form .configuration-input {
   justify-items: end;
   align-items: baseline;
 }
-main .configuration-grid .configuration-grid-form .configuration-input .form-field {
+main .configuration-grid .configuration-grid-form .configuration-input .config-form-field {
   width: 100%;
 }
 main .configuration-grid .config-save-btn {
-  grid-area: btn;
+  grid-area: configbtn;
   width: 100%;
 }
 main .action-grid {

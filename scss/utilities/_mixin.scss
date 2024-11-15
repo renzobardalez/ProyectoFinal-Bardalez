@@ -372,8 +372,8 @@
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
     "h1"
-    "form"
-    "btn";
+    "configform"
+    "configbtn";
     margin: 5px;
     padding: 5px;
     border: solid 1px $secondary-borders;
@@ -382,7 +382,7 @@
     text-align: center;
 }
 @mixin configuration-grid-form{
-    grid-area: form;
+    grid-area: configform;
     display: grid;
     gap: 1rem;
     margin: 5px;
@@ -397,11 +397,11 @@
     justify-items: end;
     align-items: baseline;
 }
-@mixin form-field{
+@mixin config-form-field{
     width: 100%;
 }
 @mixin config-save-btn{
-    grid-area: btn;
+    grid-area: configbtn;
     width: 100%;
 }
 /* --------------------------------------------------------- */

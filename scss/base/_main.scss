@@ -77,8 +77,8 @@ main{
                 @include configuration-grid-form;
                 .configuration-input{
                     @include configuration-input;
-                    .form-field{
-                        @include form-field;
+                    .config-form-field{
+                        @include config-form-field;
                     }
                 }
             }

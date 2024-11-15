@@ -468,11 +468,32 @@ main .menu-grid .dashboard-container {
   padding: 5px;
   border: solid 1px #2F4F4F;
 }
+main .action-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 400px;
+  align-items: center;
+}
+main .action-grid .option-div {
+  margin: 5px;
+  padding: 5px;
+  border: 2.5px solid #2F4F4F;
+  border-radius: 5px;
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #2F4F4F;
+}
 main .configuration-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: "h1" "configform" "configbtn";
+  grid-template-rows: auto 1fr auto auto auto;
+  grid-template-areas: "h1" "configform" "configbtn" "h3" "config-results";
   margin: 5px;
   padding: 5px;
   border: solid 1px #5e6666;
@@ -482,6 +503,13 @@ main .configuration-grid {
 }
 main .configuration-grid .h1-container {
   grid-area: h1;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #2F4F4F;
+  text-align: left;
+}
+main .configuration-grid .h3-container {
+  grid-area: h3;
   margin: 5px;
   padding: 5px;
   border: solid 1px #2F4F4F;
@@ -510,26 +538,25 @@ main .configuration-grid .config-save-btn {
   grid-area: configbtn;
   width: 100%;
 }
-main .action-grid {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 400px;
-  align-items: center;
-}
-main .action-grid .option-div {
+main .configuration-grid .config-results-container {
+  grid-area: config-results;
   margin: 5px;
   padding: 5px;
-  border: 2.5px solid #2F4F4F;
-  border-radius: 5px;
+  border: solid 1px #5e6666;
+  overflow-y: 300px;
   display: flex;
-  gap: 5px;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+main .configuration-grid .config-results-container .config-container-div {
+  font-size: small;
   color: #2F4F4F;
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  gap: 15px;
+  justify-content: space-evenly;
 }
 main .simpleExpense-container-grid {
   display: grid;
@@ -674,6 +701,7 @@ main .transactions-grid .transactions-results-container .transaction-container-d
   border: solid 1px #5e6666;
   gap: 15px;
   justify-content: space-around;
+  align-content: stretch;
 }
 
 /* Mixin */

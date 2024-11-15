@@ -36,3 +36,18 @@ document.getElementById("saveCategory").addEventListener("click", function (even
         window.location.reload();
     },1500);
 });
+// Ubicamos el contenedor
+const configResultsContainer = document.getElementById("configResultsContainer");
+// Obtenemos el array bank
+const category = JSON.parse(localStorage.getItem("category")) || [];
+// Iteramos cada div resultado
+category.forEach((elm) => {
+    const div = document.createElement("div")
+    div.classList.add("config-container-div")
+    div.innerHTML =
+    `
+    <div> Category name: ${elm.categoryName}</div>
+    <div> Category description: ${elm.categoryDescription}</div>
+    `
+    configResultsContainer.appendChild(div)
+});

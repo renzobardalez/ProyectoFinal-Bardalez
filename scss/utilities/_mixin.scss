@@ -294,6 +294,13 @@
     border: solid 1px $main-borders;
     text-align: left;
 }
+@mixin h3-container{
+    grid-area: h3;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $main-borders;
+    text-align: left;
+}
 @mixin transaction-container{
     grid-area: transaction;
     margin: 5px;
@@ -369,11 +376,13 @@
 @mixin configuration-grid{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr auto auto auto;
     grid-template-areas: 
     "h1"
     "configform"
-    "configbtn";
+    "configbtn"
+    "h3"
+    "config-results";
     margin: 5px;
     padding: 5px;
     border: solid 1px $secondary-borders;
@@ -403,6 +412,26 @@
 @mixin config-save-btn{
     grid-area: configbtn;
     width: 100%;
+}
+@mixin config-results-container{
+    grid-area: config-results;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    overflow-y: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+@mixin config-container-div{
+    font-size: small;
+    color: $main_letter_color;
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    gap: 15px;
+    justify-content: space-evenly;
 }
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
@@ -564,8 +593,8 @@
     padding: 5px;
     border: solid 1px $secondary-borders;
     gap: 15px;
-
     justify-content: space-around;
+    align-content: stretch;
 }
 
 /* --------------------------------------------------------- */

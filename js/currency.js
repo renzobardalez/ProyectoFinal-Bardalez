@@ -36,3 +36,18 @@ document.getElementById("saveCurrency").addEventListener("click", function (e) {
         window.location.reload();
     },1500);
 });
+// Ubicamos el contenedor
+const configResultsContainer = document.getElementById("configResultsContainer");
+// Obtenemos el array bank
+const currency = JSON.parse(localStorage.getItem("currency")) || [];
+// Iteramos cada div resultado
+currency.forEach((elm) => {
+    const div = document.createElement("div")
+    div.classList.add("config-container-div")
+    div.innerHTML =
+    `
+    <div> Currency name: ${elm.currencyName}</div>
+    <div> Currency symbol: ${elm.currencySymbol}</div>
+    `
+    configResultsContainer.appendChild(div)
+});

@@ -75,3 +75,21 @@ document.getElementById("saveAccount").addEventListener("click", function (event
         window.location.reload();
     },1500);
 });
+// Ubicamos el contenedor
+const configResultsContainer = document.getElementById("configResultsContainer");
+// Obtenemos el array bank
+const account = JSON.parse(localStorage.getItem("account")) || [];
+// Iteramos cada div resultado
+account.forEach((elm) => {
+    const div = document.createElement("div")
+    div.classList.add("config-container-div")
+    div.innerHTML =
+    `
+    <div> Account id: ${elm.accountBankId}</div>
+    <div> Bank name description: ${elm.accountBank}</div>
+    <div> Account currency: ${elm.accountCurrency}</div>
+    <div> Account description: ${elm.accountDescription}</div>
+    <div> Account balance description: ${elm.accountBalance}</div>
+    `
+    configResultsContainer.appendChild(div)
+});

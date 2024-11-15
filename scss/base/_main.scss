@@ -68,10 +68,19 @@ main{
                 @include dashboard-container;
             }
         }
+        .action-grid{
+            @include action-grid;
+            .option-div{
+                @include option-div;
+            }
+        }
         .configuration-grid{
             @include configuration-grid;
             .h1-container{
                 @include h1-container;
+            }
+            .h3-container{
+                @include h3-container;
             }
             .configuration-grid-form{
                 @include configuration-grid-form;
@@ -85,11 +94,11 @@ main{
             .config-save-btn{
                 @include config-save-btn;
             }
-        }
-        .action-grid{
-            @include action-grid;
-            .option-div{
-                @include option-div;
+            .config-results-container{
+                @include config-results-container;
+                .config-container-div{
+                    @include config-container-div;
+                }
             }
         }
         /* Simple Expense grid*/

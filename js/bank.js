@@ -36,3 +36,18 @@ document.getElementById("saveBank").addEventListener("click", function (event) {
         window.location.reload();
     },1500);
 });
+// Ubicamos el contenedor
+const configResultsContainer = document.getElementById("configResultsContainer");
+// Obtenemos el array bank
+const bank = JSON.parse(localStorage.getItem("bank")) || [];
+// Iteramos cada div resultado
+bank.forEach((elm) => {
+    const div = document.createElement("div")
+    div.classList.add("config-container-div")
+    div.innerHTML =
+    `
+    <div> Bank name: ${elm.bankName}</div>
+    <div> Bank description: ${elm.bankDescription}</div>
+    `
+    configResultsContainer.appendChild(div)
+});

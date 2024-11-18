@@ -5,7 +5,9 @@
 // Estilos del main
 main{
     @include main;
-        /* Log in grid*/
+        /*---------------------------------------------*/
+        /*---------------- Log in grid ----------------*/
+        /*---------------------------------------------*/
         .log-in-grid{
             @include log-in-grid;
             .log-in-h1{
@@ -47,9 +49,10 @@ main{
                     }
                 }    
             }
-
         }
-        /* Main grid */
+        /*---------------------------------------------*/
+        /*----------------- Menu grid -----------------*/
+        /*---------------------------------------------*/
         .menu-grid{
             @include menu-grid;
             .h1-container{
@@ -68,12 +71,18 @@ main{
                 @include dashboard-container;
             }
         }
+        /*---------------------------------------------*/
+        /*---------------- Action grid ----------------*/
+        /*---------------------------------------------*/
         .action-grid{
             @include action-grid;
             .option-div{
                 @include option-div;
             }
         }
+        /*---------------------------------------------*/
+        /*------------ Configuration grid -------------*/
+        /*---------------------------------------------*/
         .configuration-grid{
             @include configuration-grid;
             .h1-container{
@@ -101,7 +110,9 @@ main{
                 }
             }
         }
-        /* Simple Expense grid*/
+        /*---------------------------------------------*/
+        /*----------- Simple Expense grid -------------*/
+        /*---------------------------------------------*/
         .simpleExpense-container-grid{
             @include simpleExpense-container-grid;
             .h1-container{
@@ -120,7 +131,42 @@ main{
                 @include simpleExpense-save-btn;
             }
         }
-        /* income grid*/
+        /*---------------------------------------------*/
+        /*----------- Detailed Expense grid -----------*/
+        /*---------------------------------------------*/
+        .detailedExpense-container-grid{
+            @include detailedExpense-container-grid;
+            .h1-container{
+                @include h1-container;
+            }
+            .detailedExpense-grid-form{
+                @include detailedExpense-grid-form;
+                .detailedExpense-select{
+                    @include detailedExpense-select;
+                }
+                .detailedExpense-add-btn{
+                    @include detailedExpense-add-btn;
+                }
+                .detailedExpense-input-container{
+                    @include detailedExpense-input-container;
+                    .detailedExpense-input{
+                        @include detailedExpense-input;
+                    }
+                    .detailedExpense-form-field{
+                        @include detailedExpense-form-field;
+                    }
+                }
+                .detailedExpense-ammount{
+                    @include detailedExpense-ammount;
+                }
+            }
+            .detailedExpense-save-btn{
+                @include detailedExpense-save-btn;
+            }
+        }
+        /*---------------------------------------------*/
+        /*---------------- Income grid ----------------*/
+        /*---------------------------------------------*/
         .income-container-grid{
             @include income-container-grid;
             .h1-container{
@@ -139,7 +185,9 @@ main{
                 @include income-save-btn;
             }
         }
-        /* Transactions grid */
+        /*---------------------------------------------*/
+        /*-------------- Transactions grid ------------*/
+        /*---------------------------------------------*/
         .transactions-grid{
             @include transactions-grid;
                 .h1-container{

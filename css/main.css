@@ -48,6 +48,11 @@ body {
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
+/* ------- Contenedor exclusivo de Detailed expense -------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
 /* ----------- Contenedor exclusivo de income -------------- */
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
@@ -237,6 +242,11 @@ header .action-header-grid .nav-bar .option-div {
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
+/* ------- Contenedor exclusivo de Detailed expense -------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
 /* ----------- Contenedor exclusivo de income -------------- */
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
@@ -259,11 +269,30 @@ main {
   color: #2F4F4F;
   flex: 1;
   overflow-y: auto;
-  /* Log in grid*/
-  /* Main grid */
-  /* Simple Expense grid*/
-  /* income grid*/
-  /* Transactions grid */
+  /*---------------------------------------------*/
+  /*---------------- Log in grid ----------------*/
+  /*---------------------------------------------*/
+  /*---------------------------------------------*/
+  /*----------------- Menu grid -----------------*/
+  /*---------------------------------------------*/
+  /*---------------------------------------------*/
+  /*---------------- Action grid ----------------*/
+  /*---------------------------------------------*/
+  /*---------------------------------------------*/
+  /*------------ Configuration grid -------------*/
+  /*---------------------------------------------*/
+  /*---------------------------------------------*/
+  /*----------- Simple Expense grid -------------*/
+  /*---------------------------------------------*/
+  /*---------------------------------------------*/
+  /*----------- Detailed Expense grid -----------*/
+  /*---------------------------------------------*/
+  /*---------------------------------------------*/
+  /*---------------- Income grid ----------------*/
+  /*---------------------------------------------*/
+  /*---------------------------------------------*/
+  /*-------------- Transactions grid ------------*/
+  /*---------------------------------------------*/
 }
 main .log-in-grid {
   display: grid;
@@ -539,6 +568,7 @@ main .configuration-grid .configuration-grid-form .configuration-input .config-f
 }
 main .configuration-grid .config-save-btn {
   grid-area: configbtn;
+  margin: 5px;
   width: 100%;
 }
 main .configuration-grid .config-results-container {
@@ -606,6 +636,86 @@ main .simpleExpense-container-grid .simpleExpense-grid-form .simpleExpense-form-
 }
 main .simpleExpense-container-grid .simpleExpense-save-btn {
   grid-area: simpleExpensebtn;
+  width: 100%;
+}
+main .detailedExpense-container-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "h1" "detailedExpenseform" "detailedExpensebtn";
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main .detailedExpense-container-grid .h1-container {
+  grid-area: h1;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #2F4F4F;
+  text-align: left;
+}
+main .detailedExpense-container-grid .detailedExpense-grid-form {
+  grid-area: detailedExpenseform;
+  display: grid;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "detailedExpenseSelect" "detailedExpenseBtn" "detailedExpenseInputContainer" "detailedExpenseAmmount";
+}
+main .detailedExpense-container-grid .detailedExpense-grid-form .detailedExpense-select {
+  grid-area: detailedExpenseSelect;
+  display: grid;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+}
+main .detailedExpense-container-grid .detailedExpense-grid-form .detailedExpense-add-btn {
+  grid-area: detailedExpenseBtn;
+  margin: 5px;
+  border: solid 1px #5e6666;
+}
+main .detailedExpense-container-grid .detailedExpense-grid-form .detailedExpense-input-container {
+  grid-area: detailedExpenseInputContainer;
+  display: grid;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  grid-template-columns: auto 1fr;
+}
+main .detailedExpense-container-grid .detailedExpense-grid-form .detailedExpense-input-container .detailedExpense-input {
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  gap: 1rem;
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: subgrid;
+  justify-items: end;
+  align-items: baseline;
+}
+main .detailedExpense-container-grid .detailedExpense-grid-form .detailedExpense-input-container .detailedExpense-form-field {
+  width: 100%;
+}
+main .detailedExpense-container-grid .detailedExpense-grid-form .detailedExpense-ammount {
+  grid-area: detailedExpenseAmmount;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  display: grid;
+  justify-items: center;
+  align-items: baseline;
+  grid-template-columns: auto 1fr;
+}
+main .detailedExpense-container-grid .detailedExpense-save-btn {
+  grid-area: detailedExpensebtn;
   width: 100%;
 }
 main .income-container-grid {
@@ -748,6 +858,11 @@ main .transactions-grid .transactions-results-container .transaction-container-d
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 /* -------- Contenedor exclusivo de Simple expense --------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* ------- Contenedor exclusivo de Detailed expense -------- */
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */

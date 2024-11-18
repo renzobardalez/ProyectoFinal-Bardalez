@@ -412,6 +412,7 @@
 }
 @mixin config-save-btn{
     grid-area: configbtn;
+    margin: 5px;
     width: 100%;
 }
 @mixin config-results-container{
@@ -492,6 +493,100 @@
 }
 @mixin simpleExpense-save-btn{
     grid-area: simpleExpensebtn;
+    width: 100%;
+}
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* ------- Contenedor exclusivo de Detailed expense -------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+@mixin detailedExpense-container-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "h1"
+    "detailedExpenseform"
+    "detailedExpensebtn";
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+@mixin detailedExpense-grid-form{
+    grid-area: detailedExpenseform;
+    display: grid;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas: 
+    "detailedExpenseSelect"
+    "detailedExpenseBtn"
+    "detailedExpenseInputContainer"
+    "detailedExpenseAmmount";
+}
+@mixin detailedExpense-select{
+    grid-area: detailedExpenseSelect;
+    display: grid;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    // justify-items: end;
+    align-items: baseline;
+} 
+@mixin detailedExpense-add-btn{
+    grid-area: detailedExpenseBtn;
+    margin: 5px;
+    border: solid 1px $secondary-borders;
+}
+@mixin detailedExpense-input-container{
+    grid-area: detailedExpenseInputContainer;
+    display: grid;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    grid-template-columns: auto 1fr;
+}
+@mixin detailedExpense-input{
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    gap: 1rem;
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    justify-items: end;
+    align-items: baseline;
+}
+@mixin detailedExpense-form-field{
+    width: 100%;
+}
+@mixin detailedExpense-ammount{
+    grid-area: detailedExpenseAmmount;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    display: grid;
+    justify-items: center;
+    align-items: baseline;
+    grid-template-columns: auto 1fr;
+}
+
+
+
+
+@mixin detailedExpense-save-btn{
+    grid-area: detailedExpensebtn;
     width: 100%;
 }
 /* --------------------------------------------------------- */
@@ -605,23 +700,6 @@
         flex-wrap: nowrap;
     }
 }
-
-// display: grid;
-// grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-// font-size: small;
-// color: $main_letter_color;
-// margin: 5px;
-// padding: 5px;
-// border: solid 1px $secondary-borders;
-// div{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     flex-wrap: wrap;
-// }
-
-
-
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 /* ------------------- Estilos de footer ------------------- */

@@ -51,11 +51,11 @@ transactions.forEach((elm) => {
     div.classList.add("transaction-container-div")
     div.innerHTML = 
     `
-    <div> Bank Name:<br> ${elm.bankName}</div>
-    <div> Account:<br> ${elm.accountName}</div>
-    <div> Ammount:<br> ${elm.amount}</div>
-    <div> Type:<br> ${transactionType}</div>
-    <div> Date:<br> ${elm.date}</div>
+    <div> Bank Name: ${elm.bankName}</div>
+    <div> Account: ${elm.accountName}</div>
+    <div> Ammount: ${elm.amount}</div>
+    <div> Type: ${transactionType}</div>
+    <div> Date: ${elm.date}</div>
     `
     transactionsResultsContainer.appendChild(div)
 });

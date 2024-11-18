@@ -71,6 +71,7 @@ header .header-log-in-grid {
   padding: 5px;
   align-items: center;
   justify-items: center;
+  height: 15dvh;
 }
 header .header-log-in-grid .logo {
   grid-area: logo;
@@ -256,6 +257,8 @@ main {
   margin: 5px;
   padding: 5px;
   color: #2F4F4F;
+  flex: 1;
+  overflow-y: auto;
   /* Log in grid*/
   /* Main grid */
   /* Simple Expense grid*/
@@ -546,17 +549,22 @@ main .configuration-grid .config-results-container {
   overflow-y: 300px;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 main .configuration-grid .config-results-container .config-container-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   font-size: small;
   color: #2F4F4F;
-  display: flex;
   margin: 5px;
   padding: 5px;
   border: solid 1px #5e6666;
-  gap: 15px;
-  justify-content: space-evenly;
+}
+main .configuration-grid .config-results-container .config-container-div div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 main .simpleExpense-container-grid {
   display: grid;
@@ -692,16 +700,19 @@ main .transactions-grid .transactions-results-container {
   flex-wrap: nowrap;
 }
 main .transactions-grid .transactions-results-container .transaction-container-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   font-size: small;
   color: #2F4F4F;
-  display: flex;
-  flex-direction: row;
   margin: 5px;
   padding: 5px;
   border: solid 1px #5e6666;
-  gap: 15px;
-  justify-content: space-around;
-  align-content: stretch;
+}
+main .transactions-grid .transactions-results-container .transaction-container-div div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 /* Mixin */
@@ -758,10 +769,16 @@ footer {
   border: 1px solid #2F4F4F;
   margin: 5px;
   padding: 5px;
+  height: 10dvh;
 }
 
 body {
   background-color: #F0F8FF;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=main.css.map */

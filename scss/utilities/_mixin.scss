@@ -18,6 +18,7 @@
     padding: 5px;
     align-items: center;
     justify-items: center;
+    height: 15dvh;
 }
 /* Estilos de grid exclusivo del header menú */
 @mixin menu-header-grid{
@@ -125,12 +126,12 @@
 @mixin main{
     display: flex;
     flex-direction:column;
-    // align-items: center;
-    // justify-items: center;
     border: 1px solid $main-borders;
     margin: 5px;
     padding: 5px;
     color: $main_letter_color;
+    flex: 1;
+    overflow-y: auto;
 }
 /* Estilos de login */
 @mixin log-in-grid{
@@ -421,17 +422,22 @@
     overflow-y: 300px;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 @mixin config-container-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     font-size: small;
     color: $main_letter_color;
-    display: flex;
     margin: 5px;
     padding: 5px;
     border: solid 1px $secondary-borders;
-    gap: 15px;
-    justify-content: space-evenly;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
@@ -585,17 +591,36 @@
     flex-wrap: nowrap;
 }
 @mixin transaction-container-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     font-size: small;
     color: $main_letter_color;
-    display: flex;
-    flex-direction: row;
     margin: 5px;
     padding: 5px;
     border: solid 1px $secondary-borders;
-    gap: 15px;
-    justify-content: space-around;
-    align-content: stretch;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
 }
+
+// display: grid;
+// grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+// font-size: small;
+// color: $main_letter_color;
+// margin: 5px;
+// padding: 5px;
+// border: solid 1px $secondary-borders;
+// div{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-wrap: wrap;
+// }
+
+
 
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
@@ -606,4 +631,6 @@
     border: 1px solid $main-borders;
     margin: 5px;
     padding: 5px;
+    height: 10dvh;
+
 }

@@ -46,6 +46,7 @@ currency.forEach((elm) => {
     div.classList.add("config-container-div")
     div.innerHTML =
     `
+    <div> Currency id: ${elm.id}</div>
     <div> Currency name: ${elm.currencyName}</div>
     <div> Currency symbol: ${elm.currencySymbol}</div>
     `

@@ -54,7 +54,7 @@ document.getElementById("saveDetailedExpense").addEventListener("click", functio
     }
     const currentAccount = account.find(elm => elm.id === detailedExpenseAccountId)
     const currentCategory = category.find(elm =>  elm.id === detailedExpenseCategoryId)
-    if(currentAccount){
+    if(currentAccount && currentCategory){
         const currentBalance = currentAccount.accountBalance - detailedExpenseAmmount;
         currentAccount.accountBalance = currentBalance;
         localStorage.setItem("account",JSON.stringify(account));
@@ -66,7 +66,7 @@ document.getElementById("saveDetailedExpense").addEventListener("click", functio
             bankName: bank.find(b => b.id === currentAccount.accountBankId)?.bankName || "Unknown bank", 
             accountName: currentAccount.accountName,
             descriptionName: detailedExpenseDescription,
-            categoryName: category.find(b => b.id === currentCategory.id)?.categoryName || "Unknown category", 
+            categoryName: category.find(c => c.id === currentCategory.id)?.categoryName || "Unknown category", 
             amount: detailedExpenseAmmount,
             commentary: detailedExpenseCommentary,
             inventory: state.inventory, 

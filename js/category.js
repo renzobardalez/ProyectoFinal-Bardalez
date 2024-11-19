@@ -3,7 +3,7 @@ document.getElementById("saveCategory").addEventListener("click", function (even
     event.preventDefault(); // Evita que la página se recargue
     /* Verificación del array */
     let category = JSON.parse(localStorage.getItem("category")) || [];
-    let categoryIdCounter = parseInt(localStorage.getItem("bankIdCounter")) || 1;
+    let categoryIdCounter = parseInt(localStorage.getItem("categoryIdCounter")) || 1;
     /* Incrementamos el id para el siguiente uso */
     let newId = categoryIdCounter;
     /* Obtenemos los valores de la página */
@@ -36,6 +36,7 @@ document.getElementById("saveCategory").addEventListener("click", function (even
         window.location.reload();
     },1500);
 });
+// Mostramos registros
 // Ubicamos el contenedor
 const configResultsContainer = document.getElementById("configResultsContainer");
 // Obtenemos el array bank
@@ -46,6 +47,7 @@ category.forEach((elm) => {
     div.classList.add("config-container-div")
     div.innerHTML =
     `
+    <div> Category id: ${elm.id}</div>
     <div> Category name: ${elm.categoryName}</div>
     <div> Category description: ${elm.categoryDescription}</div>
     `

@@ -46,6 +46,7 @@ bank.forEach((elm) => {
     div.classList.add("config-container-div")
     div.innerHTML =
     `
+    <div> Bank id: ${elm.id}</div>
     <div> Bank name: ${elm.bankName}</div>
     <div> Bank description: ${elm.bankDescription}</div>
     `

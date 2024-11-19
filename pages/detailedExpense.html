@@ -41,16 +41,23 @@
                 <button class="detailedExpense-add-btn" id="addDetailedExpense" type=""> Add </button>
                 <div class="detailedExpense-input-container">
                     <div class="detailedExpense-input">
-                        <label class="detailedExpense-form-field" for=""> Description: </label>
-                        <input class="detailedExpense-form-field" type="text">
-                        <label class="detailedExpense-form-field" for=""> Category: </label>
-                        <select class="detailedExpense-form-field" name="" id="">
+                        <label class="detailedExpense-form-field" for="detailedExpenseDescription"> Description: </label>
+                        <input class="detailedExpense-form-field" id="detailedExpenseDescription" type="text" required>
+                        <label class="detailedExpense-form-field" for="detailedExpenseCategory"> Category: </label>
+                        <select class="detailedExpense-form-field" name="detailedExpenseCategory" id="detailedExpenseCategory" required>
                             <option value=""></option>
                         </select>
-                        <label class="detailedExpense-form-field" for=""> Ammount: </label>
-                        <input class="detailedExpense-form-field" type="number" name="" id="">
-                        <label class="detailedExpense-form-field" for=""> Commentary: </label>
-                        <input class="detailedExpense-form-field" type="text" name="" id="">
+                        <label class="detailedExpense-form-field" for="detailedExpenseAmmount"> Ammount: </label>
+                        <input class="detailedExpense-form-field" type="number" name="" id="detailedExpenseAmmount" required>
+                        <label class="detailedExpense-form-field" for="detailedExpenseCommentary"> Commentary: </label>
+                        <input class="detailedExpense-form-field" type="text" name="detailedExpenseCommentary" id="detailedExpenseCommentary">
+                        <label class="detailedExpense-form-field" for=""> Shared comsumption: </label>
+                        <div class="detailedExpense-form-field">
+                            <label for="yes"> Yes </label>
+                            <input type="radio" id="yes" name="answer" value="yes">
+                            <label for="no"> No </label>
+                            <input type="radio" id="no" name="answer" value="no">
+                        </div>
                     </div>
                 </div>
                 <div class="detailedExpense-ammount">

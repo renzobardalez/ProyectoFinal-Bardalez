@@ -68,6 +68,4 @@ document.getElementById("saveSimpleExpense").addEventListener("click", function 
         const simpleExpenseMessage = document.getElementById("accountMessage");
         simpleExpenseMessage.textContent="Account not found";
     }
-
-
 });

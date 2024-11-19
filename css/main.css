@@ -703,6 +703,10 @@ main .detailedExpense-container-grid .detailedExpense-grid-form .detailedExpense
 }
 main .detailedExpense-container-grid .detailedExpense-grid-form .detailedExpense-input-container .detailedExpense-form-field {
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 main .detailedExpense-container-grid .detailedExpense-grid-form .detailedExpense-ammount {
   grid-area: detailedExpenseAmmount;
@@ -893,7 +897,6 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 /*# sourceMappingURL=main.css.map */

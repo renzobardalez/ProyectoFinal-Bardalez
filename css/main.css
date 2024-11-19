@@ -673,9 +673,25 @@ main .detailedExpense-container-grid .detailedExpense-grid-form .detailedExpense
   margin: 5px;
   padding: 5px;
   border: solid 1px #5e6666;
-  display: grid;
   grid-template-columns: auto 1fr;
+}
+main .detailedExpense-container-grid .detailedExpense-grid-form .detailedExpense-select .detailedExpense-input {
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  gap: 1rem;
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: subgrid;
+  justify-items: end;
   align-items: baseline;
+}
+main .detailedExpense-container-grid .detailedExpense-grid-form .detailedExpense-select .detailedExpense-form-field {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 main .detailedExpense-container-grid .detailedExpense-grid-form .detailedExpense-add-btn {
   grid-area: detailedExpenseBtn;

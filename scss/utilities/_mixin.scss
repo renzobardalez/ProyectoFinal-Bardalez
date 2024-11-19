@@ -539,10 +539,7 @@
     margin: 5px;
     padding: 5px;
     border: solid 1px $secondary-borders;
-    display: grid;
     grid-template-columns: auto 1fr;
-    // justify-items: end;
-    align-items: baseline;
 } 
 @mixin detailedExpense-add-btn{
     grid-area: detailedExpenseBtn;

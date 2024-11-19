@@ -143,6 +143,12 @@ main{
                 @include detailedExpense-grid-form;
                 .detailedExpense-select{
                     @include detailedExpense-select;
+                    .detailedExpense-input{
+                        @include detailedExpense-input;
+                    }
+                    .detailedExpense-form-field{
+                        @include detailedExpense-form-field;
+                    }
                 }
                 .detailedExpense-add-btn{
                     @include detailedExpense-add-btn;

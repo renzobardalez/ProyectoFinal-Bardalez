@@ -83,11 +83,15 @@ const account = JSON.parse(localStorage.getItem("account")) || [];
 account.forEach((elm) => {
     const div = document.createElement("div")
     div.classList.add("config-container-div")
+    const currentBank = bank.find(b => b.id === parseInt(elm.accountBankId));
+    const bankName = currentBank ? currentBank.bankName : '';
+    const currentCurrency = currency.find(c => c.id === parseInt(elm.accountCurrencyId));
+    const currencySymbol = currentCurrency ? currentCurrency.currencySymbol:'';
     div.innerHTML =
     `
     <div> Account id: ${elm.accountBankId}</div>
-    <div> Bank name description: ${elm.accountBank}</div>
-    <div> Account currency: ${elm.accountCurrency}</div>
+    <div> Bank name description: ${bankName}</div>
+    <div> Account currency: ${currencySymbol}</div>
     <div> Account description: ${elm.accountDescription}</div>
     <div> Account balance description: ${elm.accountBalance}</div>
     `

@@ -11,10 +11,10 @@ account.forEach((elm) => {
     option.value = elm.id;
     const currentBank = bank.find(b => b.id === elm.accountBankId)
     const bankName = currentBank ? currentBank.bankName : "Unknown bank";
-    const currentCurrency = currency.find(b => b.id === elm.accountBankId)
-    const currencySymbol = currentCurrency ? currentCurrency.currencySymbol : "Unknown bank";
+    const currentCurrency = currency.find(c => c.id === parseInt(elm.accountCurrencyId));
+    const currencySymbol = currentCurrency ? currentCurrency.currencySymbol:'Unknown currency';
     option.textContent = ` ${bankName} - ${elm.accountName} ${currencySymbol} ${elm.accountBalance}`;
-    accountFilter.appendChild(option);    
+    accountFilter.appendChild(option);
 });
 function getTransactionType(inventory, transaction_type){
     let transactionType;

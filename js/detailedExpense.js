@@ -13,7 +13,7 @@ account.forEach((elm) => {
     option.value = elm.id;
     const currentBank = bank.find(b => b.id === elm.accountBankId)
     const bankName = currentBank ? currentBank.bankName : "Unknown bank";
-    const currentCurrency = currency.find(b => b.id === elm.accountBankId)
+    const currentCurrency = currency.find(c => c.id === elm.accountCurrencyId)
     const currencySymbol = currentCurrency ? currentCurrency.currencySymbol : "Unknown bank";
     option.textContent = ` ${bankName} - ${elm.accountName} ${currencySymbol} ${elm.accountBalance}`;
     detailedExpenseAccount.appendChild(option);    

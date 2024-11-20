@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CardStock - Menu </title>
+    <!-- Conexión a CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+        <section class="action-header-grid">
+            <!-- Logo -->
+            <a href="./menu.html">
+                <img class="logo" src="../img/Cardstock_logo.png" alt="">
+            </a>
+            <!-- Configuration & sign out -->
+            <div class="config"> 
+                <a class="config-a" href="./menu.html"> 
+                    <div class="option-div"> Menu </div>
+                </a>
+                <a class="config-a" href="./configuration.html"> 
+                    <div class="option-div"> Go Back </div>
+                </a> 
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="configuration-grid">
+            <h1 class="h1-container"> Add budget </h1>
+            <form class="configuration-grid-form" action="">
+                <div class="configuration-input">
+                    <label class="config-form-field" for="categoryName"> Category name: </label>
+                    <input class="config-form-field" id="categoryName" type="text" required>
+                </div>
+                <div class="configuration-input">
+                    <label class="config-form-field" for="categoryDescription"> Description: </label>
+                    <input class="config-form-field" id="categoryDescription" type="text">
+                </div>
+            </form>
+            <button class="config-save-btn" id="saveCategory" type=""> Save </button>
+            <p id="categoryMessage"></p>
+            <h3 class="h3-container"> Results: </h3>
+            <div class="config-results-container" id="configResultsContainer">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>Redes sociales</p>
+        </div>
+    </footer>
+    <script src="../js/budget.js"></script>
+</body>
+</html>

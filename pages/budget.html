@@ -27,22 +27,34 @@
     </header>
 
     <main>
-        <section class="configuration-grid">
+        <section class="budget-grid">
             <h1 class="h1-container"> Add budget </h1>
-            <form class="configuration-grid-form" action="">
-                <div class="configuration-input">
-                    <label class="config-form-field" for="categoryName"> Category name: </label>
-                    <input class="config-form-field" id="categoryName" type="text" required>
+            <form class="budget-grid-form" action="">
+                <div class="budget-input">
+                    <label class="budget-form-field" for="budgetCategory"> Category name: </label>
+                    <select class="budget-form-field" name="budgetCategory" id="budgetCategory" required>
+                        <option value=""></option>
+                    </select>
                 </div>
-                <div class="configuration-input">
-                    <label class="config-form-field" for="categoryDescription"> Description: </label>
-                    <input class="config-form-field" id="categoryDescription" type="text">
+                <div class="budget-input">
+                    <label class="budget-form-field" for="budgetCurrency"> Currency: </label>
+                    <select class="budget-form-field" name="budgetCurrency" id="budgetCurrency" required>
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="budget-input">
+                    <label class="budget-form-field" for="budgetAmmount"> Ammount: </label>
+                    <input class="budget-form-field" id="budgetAmmount" type="number" required>
+                </div>
+                <div class="budget-input">
+                    <label class="budget-form-field" for="budgetDescription"> Description: </label>
+                    <input class="budget-form-field" id="budgetDescription" type="text">
                 </div>
             </form>
-            <button class="config-save-btn" id="saveCategory" type=""> Save </button>
-            <p id="categoryMessage"></p>
+            <button class="budget-save-btn" id="saveBudget" type=""> Save </button>
+            <p id="budgetMessage"></p>
             <h3 class="h3-container"> Results: </h3>
-            <div class="config-results-container" id="configResultsContainer">
+            <div class="budget-results-container" id="budgetResultsContainer">
             </div>
         </section>
     </main>

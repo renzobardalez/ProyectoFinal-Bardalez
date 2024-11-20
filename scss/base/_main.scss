@@ -111,6 +111,36 @@ main{
             }
         }
         /*---------------------------------------------*/
+        /*------------ Budget grid -------------*/
+        /*---------------------------------------------*/
+        .budget-grid{
+            @include budget-grid;
+            .h1-container{
+                @include h1-container;
+            }
+            .h3-container{
+                @include h3-container;
+            }
+            .budget-grid-form{
+                @include budget-grid-form;
+                .budget-input{
+                    @include budget-input;
+                    .budget-form-field{
+                        @include budget-form-field;
+                    }
+                }
+            }
+            .budget-save-btn{
+                @include budget-save-btn;
+            }
+            .budget-results-container{
+                @include budget-results-container;
+                .budget-container-div{
+                    @include budget-container-div;
+                }
+            }
+        }
+        /*---------------------------------------------*/
         /*----------- Simple Expense grid -------------*/
         /*---------------------------------------------*/
         .simpleExpense-container-grid{

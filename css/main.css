@@ -38,6 +38,11 @@ body {
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
+/* ------------- Contenedor exclusivo de budget -------------*/
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
 /*  Contenedor exclusivo de transferAction e inventoryAction */
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
@@ -232,6 +237,11 @@ header .action-header-grid .nav-bar .option-div {
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
+/* ------------- Contenedor exclusivo de budget -------------*/
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
 /*  Contenedor exclusivo de transferAction e inventoryAction */
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
@@ -280,6 +290,9 @@ main {
   /*---------------------------------------------*/
   /*---------------------------------------------*/
   /*------------ Configuration grid -------------*/
+  /*---------------------------------------------*/
+  /*---------------------------------------------*/
+  /*------------ Budget grid -------------*/
   /*---------------------------------------------*/
   /*---------------------------------------------*/
   /*----------- Simple Expense grid -------------*/
@@ -596,6 +609,81 @@ main .configuration-grid .config-results-container .config-container-div div {
   justify-content: center;
   flex-wrap: wrap;
 }
+main .budget-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto auto auto;
+  grid-template-areas: "h1" "budgetform" "budgetbtn" "h3" "budget-results";
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main .budget-grid .h1-container {
+  grid-area: h1;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #2F4F4F;
+  text-align: left;
+}
+main .budget-grid .h3-container {
+  grid-area: h3;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #2F4F4F;
+  text-align: left;
+}
+main .budget-grid .budget-grid-form {
+  grid-area: budgetform;
+  display: grid;
+  gap: 1rem;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  grid-template-columns: auto 1fr;
+}
+main .budget-grid .budget-grid-form .budget-input {
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: subgrid;
+  justify-items: end;
+  align-items: baseline;
+}
+main .budget-grid .budget-grid-form .budget-input .budget-form-field {
+  width: 100%;
+}
+main .budget-grid .budget-save-btn {
+  grid-area: budgetbtn;
+  margin: 5px;
+  width: 100%;
+}
+main .budget-grid .budget-results-container {
+  grid-area: budget-results;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+  overflow-y: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+main .budget-grid .budget-results-container .budget-container-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  font-size: small;
+  color: #2F4F4F;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #5e6666;
+}
+main .budget-grid .budget-results-container .budget-container-div div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 main .simpleExpense-container-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -868,6 +956,11 @@ main .transactions-grid .transactions-results-container .transaction-container-d
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 /* ---------- Contenedor exclusivo de Configuration ---------*/
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* ------------- Contenedor exclusivo de budget -------------*/
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */

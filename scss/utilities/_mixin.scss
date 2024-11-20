@@ -442,6 +442,77 @@
 }
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
+/* ------------- Contenedor exclusivo de budget -------------*/
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+@mixin budget-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto auto;
+    grid-template-areas: 
+    "h1"
+    "budgetform"
+    "budgetbtn"
+    "h3"
+    "budget-results";
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@mixin budget-grid-form{
+    grid-area: budgetform;
+    display: grid;
+    gap: 1rem;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    grid-template-columns: auto 1fr;
+}
+@mixin budget-input{
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    justify-items: end;
+    align-items: baseline;
+}
+@mixin budget-form-field{
+    width: 100%;
+}
+@mixin budget-save-btn{
+    grid-area: budgetbtn;
+    margin: 5px;
+    width: 100%;
+}
+@mixin budget-results-container{
+    grid-area: budget-results;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    overflow-y: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+@mixin budget-container-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    font-size: small;
+    color: $main_letter_color;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px $secondary-borders;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
 /*  Contenedor exclusivo de transferAction e inventoryAction */
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */

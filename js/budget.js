@@ -33,9 +33,10 @@ document.getElementById("saveBudget").addEventListener("click", function (e) {
     /* Obtenemos los valores de la página */
     const budgetCategory = document.getElementById("budgetCategory").value;
     const budgetCurrency = document.getElementById("budgetCurrency").value;
-    const budgetAmmount = document.getElementById("budgetAmmount").value;
-    const budgetDescription = document.getElementById("budgetAmmount").value;
-    if (!budgetCategory || !budgetCurrency || isNaN(budgetAmmount)){
+    const budgetMinAmmount = document.getElementById("budgetMinAmmount").value;
+    const budgetMaxAmmount = document.getElementById("budgetMaxAmmount").value;
+    const budgetDescription = document.getElementById("budgetDescription").value;
+    if (!budgetCategory || !budgetCurrency || isNaN(budgetMinAmmount) ||isNaN(budgetMaxAmmount)){
         const budgetMessage = document.getElementById("budgetMessage");
         budgetMessage.textContent = "Por favor ingrese valores válidos.";
         setTimeout(() => {
@@ -43,9 +44,17 @@ document.getElementById("saveBudget").addEventListener("click", function (e) {
         },1500);
         return;
     }
-    if(budgetAmmount<0){
+    if(budgetMinAmmount<0){
         const budgetMessage = document.getElementById("budgetMessage");
         budgetMessage.textContent = "Por favor ingrese un valor positivo.";
+        setTimeout(() => {
+            window.location.reload();
+        },1500);
+        return;
+    }
+    if(budgetMaxAmmount<0 || budgetMinAmmount > budgetMaxAmmount){
+        const budgetMessage = document.getElementById("budgetMessage");
+        budgetMessage.textContent = "Por favor ingrese un valor positivo o un valor mayor al Minimun ammount range.";
         setTimeout(() => {
             window.location.reload();
         },1500);
@@ -56,7 +65,8 @@ document.getElementById("saveBudget").addEventListener("click", function (e) {
         id: newId,
         budgetCategory: budgetCategory,
         budgetCurrency: budgetCurrency,
-        budgetAmmount: budgetAmmount,
+        budgetMinAmmount: budgetMinAmmount,
+        budgetMaxAmmount: budgetMaxAmmount,
         budgetDescription: budgetDescription
     };
     budget.push(newBudget);
@@ -68,7 +78,8 @@ document.getElementById("saveBudget").addEventListener("click", function (e) {
     /* Reseteamos los campos */
     document.getElementById("budgetCategory").value="";
     document.getElementById("budgetCurrency").value="";
-    document.getElementById("budgetAmmount").value="";
+    document.getElementById("budgetMinAmmount").value="";
+    document.getElementById("budgetMaxAmmount").value="";
     document.getElementById("budgetDescription").value="";
     setTimeout(() => {
         window.location.reload();
@@ -85,9 +96,10 @@ budget.forEach((elm) => {
     div.innerHTML =
     `
     <div> Budget id: ${elm.id}</div>
-    <div> Budget categroy: ${elm.budgetCategory}</div>
-    <div> Budget categroy: ${elm.budgetCurrency}</div>
-    <div> Budget ammount: ${elm.budgetAmmount}</div>
+    <div> Budget category: ${elm.budgetCategory}</div>
+    <div> Budget category: ${elm.budgetCurrency}</div>
+    <div> Budget minimun range ammount: ${elm.budgetMinAmmount}</div>
+    <div> Budget maximun range ammount: ${elm.budgetMaxAmmount}</div>
     <div> Budget ammount: ${elm.budgetDescription}</div>
     `
     budgetResultsContainer.appendChild(div)

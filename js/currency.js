@@ -20,6 +20,7 @@ document.getElementById("saveCurrency").addEventListener("click", function (e) {
     /* Creación del array */
     let newCurrency = {
         id: newId,
+        date: new Date().toISOString(),
         currencyName: currencyName,
         currencySymbol: currencySymbol,
     };
@@ -49,6 +50,7 @@ currency.forEach((elm) => {
     <div> Currency id: ${elm.id}</div>
     <div> Currency name: ${elm.currencyName}</div>
     <div> Currency symbol: ${elm.currencySymbol}</div>
+    <div> Date: ${elm.date}</div>
     `
     configResultsContainer.appendChild(div)
 });

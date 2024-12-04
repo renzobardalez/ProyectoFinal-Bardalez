@@ -20,6 +20,7 @@ document.getElementById("saveCategory").addEventListener("click", function (even
     /* Creación del array */
     let newAccount = {
         id: newId,
+        date: new Date().toISOString(), 
         categoryName: categoryName,
         categoryDescription: categoryDescription,
     };
@@ -50,6 +51,7 @@ category.forEach((elm) => {
     <div> Category id: ${elm.id}</div>
     <div> Category name: ${elm.categoryName}</div>
     <div> Category description: ${elm.categoryDescription}</div>
+    <div> Date: ${elm.date} </div>
     `
     configResultsContainer.appendChild(div)
 });

@@ -63,6 +63,7 @@ document.getElementById("saveBudget").addEventListener("click", function (e) {
     /* Creación del array */
     let newBudget = {
         id: newId,
+        date: new Date().toISOString(), 
         budgetCategory: budgetCategory,
         budgetCurrency: budgetCurrency,
         budgetMinAmmount: budgetMinAmmount,
@@ -101,6 +102,7 @@ budget.forEach((elm) => {
     <div> Budget minimun range ammount: ${elm.budgetMinAmmount}</div>
     <div> Budget maximun range ammount: ${elm.budgetMaxAmmount}</div>
     <div> Budget ammount: ${elm.budgetDescription}</div>
+    <div>date: ${elm.date}</div>
     `
     budgetResultsContainer.appendChild(div)
 });

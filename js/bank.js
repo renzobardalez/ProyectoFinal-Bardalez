@@ -20,6 +20,7 @@ document.getElementById("saveBank").addEventListener("click", function (event) {
     /* Creación del array */
     let newAccount = {
         id: newId,
+        date: new Date().toISOString(), 
         bankName: bankName,
         bankDescription: bankDescription,
     };
@@ -49,6 +50,7 @@ bank.forEach((elm) => {
     <div> Bank id: ${elm.id}</div>
     <div> Bank name: ${elm.bankName}</div>
     <div> Bank description: ${elm.bankDescription}</div>
+    <div> Date: ${elm.date}</div>
     `
     configResultsContainer.appendChild(div)
 });

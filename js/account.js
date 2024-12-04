@@ -50,6 +50,7 @@ document.getElementById("saveAccount").addEventListener("click", function (event
     /* Creación del array */
     let newAccount = {
         id: newId,
+        date: new Date().toISOString(), 
         accountBankId: parseInt(accountBankId),
         accountCurrencyId: parseInt(accountCurrencyId),
         accountName: accountName,
@@ -94,6 +95,7 @@ account.forEach((elm) => {
     <div> Account currency: ${currencySymbol}</div>
     <div> Account description: ${elm.accountDescription}</div>
     <div> Account balance description: ${elm.accountBalance}</div>
+    <div> Date: ${elm.date}</div>
     `
     configResultsContainer.appendChild(div)
 });

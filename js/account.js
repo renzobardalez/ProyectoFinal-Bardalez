@@ -99,3 +99,58 @@ account.forEach((elm) => {
     `
     configResultsContainer.appendChild(div)
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  /* 1era opción */
+
+// const getCurrency = (data) =>{
+//     return new Promise((resolve, reject) => {
+//         if(data === false){
+//             reject("Error al traer los datos")
+//         }
+//         setTimeout(() => {
+//             resolve(/* Base de datos */)
+//         }, 2000); /* 1000 = 1s */
+//     })
+// }
+
+// getCurrency()
+//     .then(
+//         (res) => {
+//             productos = res
+//             console.log(res)
+//             /* función que queremos hacer en este caso hacer push al array currency? */
+//         }
+//     )
+//     .catch()
+
+
+//  /* 2da opción */
+// async function initiateGetCurrency() {
+//     try {
+//         const response = await getCurrency()
+//         /* función que queremos hacer en este caso hacer push al array currency? */
+//     } catch(e){
+//         console.log(e);
+//     }
+// };
+
+// initiateGetCurrency();
+fetch('https://openexchangerates.org/api/currencies.json')
+    .then((resp) => resp.json())
+    .then((data)=>{
+        console.log(data)
+    })

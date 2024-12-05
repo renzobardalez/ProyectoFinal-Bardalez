@@ -1,4 +1,4 @@
-// Fetch y almacenar monedas desde la API
+/* -------------------- Fetch y almacenamiento de monedas desde la API -------------------- */
 // Obtenemos el array currency
 let currency = JSON.parse(localStorage.getItem("currency")) || [];
 // Obtenemos el contador
@@ -28,8 +28,7 @@ function fetchAndStoreCurrencies() {
 document.addEventListener('DOMContentLoaded', () => {
     fetchAndStoreCurrencies();
 });
-
-
+/* ------------------------------------- Registro ----------------------------------------- */
 /* Registro de currency */
 document.getElementById("saveCurrency").addEventListener("click", function (e) {
     e.preventDefault(); // Evita que la página se recargue

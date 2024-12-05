@@ -1,3 +1,35 @@
+// Fetch y almacenar monedas desde la API
+// Obtenemos el array currency
+let currency = JSON.parse(localStorage.getItem("currency")) || [];
+// Obtenemos el contador
+// Debido a que viene de un API usamos una constante ya que los registros que se hagan serán aumentados en el contador a la cantidad de la API.
+const currencyIdCounter = parseInt(localStorage.getItem("currencyIdCounter")) || 1;
+function fetchAndStoreCurrencies() {
+    if (currency.length === 0) {
+        fetch('https://openexchangerates.org/api/currencies.json')
+            .then((resp) => resp.json())
+            .then((data) => {
+                let newId = currencyIdCounter;
+                Object.entries(data).forEach(([key, value]) => {
+                    currency.push({ id: newId++, currencySymbol: key, currencyName: value });
+                });
+                localStorage.setItem('currency', JSON.stringify(currency));
+                localStorage.setItem('currencyIdCounter', newId);
+                console.log('Datos obtenidos y guardados:', currency); 
+            })
+            .catch((error) => {
+                console.error('Error fetching currencies:', error);// Como mejora se puede hacer un modal
+            });
+    } else {
+        console.log('Datos cargados desde localStorage:', currency);// Como mejora se puede hacer un modal
+    }
+}
+// Llama a la función cuando la página se cargue
+document.addEventListener('DOMContentLoaded', () => {
+    fetchAndStoreCurrencies();
+});
+
+
 /* Registro de currency */
 document.getElementById("saveCurrency").addEventListener("click", function (e) {
     e.preventDefault(); // Evita que la página se recargue
@@ -39,8 +71,6 @@ document.getElementById("saveCurrency").addEventListener("click", function (e) {
 });
 // Ubicamos el contenedor
 const configResultsContainer = document.getElementById("configResultsContainer");
-// Obtenemos el array bank
-const currency = JSON.parse(localStorage.getItem("currency")) || [];
 // Iteramos cada div resultado
 currency.forEach((elm) => {
     const div = document.createElement("div")
